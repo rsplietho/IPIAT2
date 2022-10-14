@@ -1,0 +1,10 @@
+/* */
+@import "css/JelmerB.css";
+@import "css/JelmerO.css";
+@import "css/Robertjan.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
