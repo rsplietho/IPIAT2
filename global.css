@@ -3,8 +3,15 @@
 @import "css/JelmerO.css";
 @import "css/Robertjan.css";
 
+@font-face {
+    font-family: normaltext;
+    src: url(/font/Swansea-q3pd.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: normaltext;
 }
+
