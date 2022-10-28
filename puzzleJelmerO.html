@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="css/JelmerO.css">
+    <script src="scripts/JelmerO.js" defer></script>
+</head>
+<body>
+    <h1 class="titel">Vorm de sleutel</h1>
+    <section class="draggable-elements">
+        <img src="/assets/JelmerO/img/key2.png" class="draggable" draggable="true" data-color id="key2"/>
+        <img src="/assets/JelmerO/img/key1.png" class="draggable" draggable="true" data-color id="key1"/>
+        <img src="/assets/JelmerO/img/key3.png" class="draggable" draggable="true" data-color id="key3"/>
+        <img src="/assets/JelmerO/img/key2Red.png" class="draggable" draggable="true" ddata-color="Red" id="key2"/>
+        <img src="/assets/JelmerO/img/key1Red.png" class="draggable" draggable="true" data-color="Red" id="key1"/>
+        <img src="/assets/JelmerO/img/key3Red.png" class="draggable" draggable="true" data-color="Red" id="key3"/>
+      </section>
+      <section class="droppable-elements">
+        <div class="droppable" data-draggable-id="key1"><span>piece 1</span></div>
+        <div class="droppable" data-draggable-id="key2"><span>piece 2</span></div>
+        <div class="droppable" data-draggable-id="key3"><span>piece 3</span></div>
+      </section>
+      <br>
+      <button class="checkButton" onclick="checkKey()">Check</button>
+
+      <p id="message"></p>
+
+      <div id="overlay">
+        <button onclick="startGame()">Start</button>
+      </div>
+</body>
+</html>
