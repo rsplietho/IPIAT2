@@ -1,0 +1,26 @@
+@media only screen and (orientation: portrait) {
+    body {
+        background-image: url('../img/Huis.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+@media only screen and (orientation: landscape) {
+    body {
+        background-image: url('../img/huis_desktop.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    a {
+        position: absolute;
+        margin-top: 34%;
+        margin-left: 35%;
+        padding-top: 180px;
+        padding-bottom: 150px;
+        padding-left: 100px;
+        background-color: red;
+    }
+}
