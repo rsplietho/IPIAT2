@@ -4,6 +4,22 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+    .button_1{
+        position: absolute;
+        top: 65%;
+        left: 37%;
+        padding-top: 50px;
+        padding-bottom: 120px;
+        padding-left: 40px;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        background-image: linear-gradient(to right, none 50%, darkred 50%);
+        background-size: 200%;
+        transition: 0.4s ease-out;
+    }
+    .button_1:hover {
+        background-position: right;
+    }
 }
 
 
@@ -14,13 +30,20 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-    a {
+    .button_1{
         position: absolute;
-        margin-top: 34%;
-        margin-left: 35%;
-        padding-top: 180px;
-        padding-bottom: 150px;
-        padding-left: 100px;
-        background-color: red;
+        top: 69%;
+        left: 35.5%;
+        padding-top: 190px;
+        padding-bottom: 130px;
+        padding-left: 135px;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        background-image: linear-gradient(to right, black 50%, darkred 50%);
+        background-size: 200%;
+        transition: 0.4s ease-out;
+    }
+    .button_1:hover {
+        background-position: right;
     }
 }
