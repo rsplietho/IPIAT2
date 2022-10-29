@@ -1,23 +1,39 @@
 @media only screen and (orientation: portrait) {
-    body {
+    .jelmerbody {
         background-image: url('../img/Huis.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
-    .button_1{
+    .button_deur{
         position: absolute;
-        top: 65%;
-        left: 37%;
-        padding-top: 50px;
-        padding-bottom: 120px;
-        padding-left: 40px;
+        top: 67.5%;
+        left: 41.5%;
+        padding-top: 90px;
+        padding-bottom: 50px;
+        padding-left: 60px;
         border-radius: 0.5rem;
         cursor: pointer;
-        background-image: linear-gradient(to right, none 50%, darkred 50%);
+        background-image: linear-gradient(to right, black 50%, darkred 50%);
         background-size: 200%;
         transition: 0.4s ease-out;
     }
-    .button_1:hover {
+    .button_deur:hover {
+        background-position: right;
+    }
+    .button_raam{
+        position: absolute;
+        top: 44%;
+        left: 32%;
+        padding-top: 20px;
+        padding-bottom: 105px;
+        padding-left: 200px;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        background-image: linear-gradient(to right, black 50%, darkred 50%);
+        background-size: 200%;
+        transition: 0.4s ease-out;
+    }
+    .button_raam:hover {
         background-position: right;
     }
 }
@@ -25,12 +41,12 @@
 
 
 @media only screen and (orientation: landscape) {
-    body {
+    .jelmerbody {
         background-image: url('../img/huis_desktop.png');
         background-size: cover;
         background-repeat: no-repeat;
     }
-    .button_1{
+    .button_deur{
         position: absolute;
         top: 69%;
         left: 35.5%;
@@ -41,9 +57,36 @@
         cursor: pointer;
         background-image: linear-gradient(to right, black 50%, darkred 50%);
         background-size: 200%;
-        transition: 0.4s ease-out;
+        transition: 0.3s ease-out;
     }
-    .button_1:hover {
+    .button_deur:hover {
         background-position: right;
+    }
+    .button_raam{
+        position: absolute;
+        top: 32.5%;
+        left: 32%;
+        padding-top: 70px;
+        padding-bottom: 125px;
+        padding-left: 310px;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        background-image: linear-gradient(to right, black 50%, darkred 50%);
+        background-size: 200%;
+        transition: 0.3s ease-out;
+    }
+    .button_raam:hover {
+        background-position: right;
+    }
+    .easteregg {
+        position: absolute;
+        top: 36%;
+        left: 72%;
+        padding-top: 40px;
+        padding-bottom: 125px;
+        padding-left: 290px;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        background: none;
     }
 }
