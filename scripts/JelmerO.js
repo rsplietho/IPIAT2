@@ -1,5 +1,3 @@
-
-
 const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".droppable");
 
@@ -21,9 +19,9 @@ droppableElements.forEach(elem => {
 //Events fired on the drag target
 
 function dragStart(event) {
-  event.dataTransfer.setData("text", [event.target.id, event.target.dataset.color]); // or "text/plain" but just "text" would also be fine since we are not setting any other type/format for data value
+  event.dataTransfer.setData("text",event.target.dataset.keyAndColor); // or "text/plain" but just "text" would also be fine since we are not setting any other type/format for data value
 }
-
+// [event.target.id, event.target.dataset.color]
 //Events fired on the drop target
 
 function dragEnter(event) {
@@ -51,51 +49,75 @@ function drop(event) {
 
 
   const transferredData = event.dataTransfer.getData("text"); // Get the dragged data. This method will return any data that was set to the same type in the setData() method
-  const dataArray  = transferredData.split(',');
-  const draggableElementData = dataArray[0];
+  console.log(transferredData);
+  const dataArray  = transferredData.split('.');
+
+
+  // id van de key die is gedropped
+  const keyType = dataArray[0];
 
   console.log(dataArray[0] + ' and ' + dataArray[1])
   const droppableElementData = event.target.getAttribute("data-draggable-id");
-  const isCorrectMatching = draggableElementData === droppableElementData;
+  const isCorrectMatching = keyType === droppableElementData;
+  
 
-    //   kleur in variabele zetten om te kunnen gebruiken
+    //kleur in variabele zetten om te kunnen gebruiken
   const keyColor = dataArray[1];
 
 
   if(isCorrectMatching) {
-    const draggableElement = document.getElementById(draggableElementData);
+    const draggableElement = document.querySelector('[data-key-and-color="'+transferredData+'"]');
     event.target.classList.add("dropped");
     // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
     // event.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
     draggableElement.classList.add("dragged");
     draggableElement.setAttribute("draggable", "false");
-    event.target.insertAdjacentHTML("afterbegin", `<img class="droppedImg" src="/assets/JelmerO/img/${draggableElementData}${keyColor}.png"/>`);
+    event.target.insertAdjacentHTML("afterbegin", `<img class="droppedImg" src="/assets/JelmerO/img/${keyType}${keyColor}.png"/>`);
   }  
 }
 
 
-function startGame(){
-    const lives = localStorage.getItem('lives')
-    localStorage.setItem('lives', 100);
-    const overlay = document.getElementById('overlay');
-    overlay.style.display = "none";
-    const message = document.getElementById('message');
-    message.innerHTML = "Je hebt nog " + lives + " levens over!" ; 
+// function startGame(){
+//     const lives = localStorage.getItem('lives')
+//     localStorage.setItem('lives', 100);
+//     const overlay = document.getElementById('overlay');
+//     overlay.style.display = "none";
+//     const message = document.getElementById('message');
+//     message.innerHTML = "Je hebt nog " + lives + " levens over!" ; 
+// }
+
+// Om te checken of de combinatie van de sleutels de juiste is.
+function checkKey() {
+  const lives = localStorage.getItem('lives')
+  const livesNew = lives - 10;
+  const draggedItems = [];
+
+    draggableElements.forEach(elem => {
+      if(elem.classList.contains('dragged')) {
+        draggedItems.push(elem);
+      }
+    });
+
+    if(
+      draggedItems[0].dataset.color === "" &&
+      draggedItems[1].dataset.color === "" &&
+      draggedItems[2].dataset.color === ""
+      ){
+        message.innerHTML = "JE HEBT DE COMBINATIE GOED";
+      }else{
+        message.innerHTML = "JE HEBT DE COMBINATIE FOUT";
+        // showLives(livesNew)
+        // location.reload(); 
+      }
+    console.log(draggedItems)
+
+    // showLives(livesNew)
+    // location.reload(); 
 }
 
-function checkKey() {
-    const lives = localStorage.getItem('lives')
-    const livesNew = lives - 10;
-    localStorage.setItem('lives', livesNew);
-    
-
-    message.innerHTML = "Je hebt nog " + lives + " levens over!" ; 
-    // const droppedElements = document.querySelectorAll(".dropped");
-
-    // droppedElements.forEach(elem => {
-    //     console.log(elem);
-    // });
-
+function showLives(l){
+  localStorage.setItem('lives', l);
+  message.innerHTML = "Je hebt nog " + l + " levens over!";
 }
 
 

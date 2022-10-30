@@ -12,12 +12,12 @@
 <body>
     <h1 class="titel">Vorm de sleutel</h1>
     <section class="draggable-elements">
-        <img src="/assets/JelmerO/img/key2.png" class="draggable" draggable="true" data-color id="key2"/>
-        <img src="/assets/JelmerO/img/key1.png" class="draggable" draggable="true" data-color id="key1"/>
-        <img src="/assets/JelmerO/img/key3.png" class="draggable" draggable="true" data-color id="key3"/>
-        <img src="/assets/JelmerO/img/key2Red.png" class="draggable" draggable="true" ddata-color="Red" id="key2"/>
-        <img src="/assets/JelmerO/img/key1Red.png" class="draggable" draggable="true" data-color="Red" id="key1"/>
-        <img src="/assets/JelmerO/img/key3Red.png" class="draggable" draggable="true" data-color="Red" id="key3"/>
+        <img src="/assets/JelmerO/img/key2.png" class="draggable" draggable="true" data-color id="key2" data-key-and-color="key2."/>
+        <img src="/assets/JelmerO/img/key1.png" class="draggable" draggable="true" data-color id="key1" data-key-and-color="key1."/>
+        <img src="/assets/JelmerO/img/key3.png" class="draggable" draggable="true" data-color id="key3" data-key-and-color="key3."/>
+        <img src="/assets/JelmerO/img/key2Red.png" class="draggable" draggable="true" data-color="Red" id="key2" data-key-and-color="key2.Red"/>
+        <img src="/assets/JelmerO/img/key1Red.png" class="draggable" draggable="true" data-color="Red" id="key1" data-key-and-color="key1.Red"/>
+        <img src="/assets/JelmerO/img/key3Red.png" class="draggable" draggable="true" data-color="Red" id="key3" data-key-and-color="key3.Red"/>
       </section>
       <section class="droppable-elements">
         <div class="droppable" data-draggable-id="key1"><span>piece 1</span></div>
@@ -25,12 +25,12 @@
         <div class="droppable" data-draggable-id="key3"><span>piece 3</span></div>
       </section>
       <br>
-      <button class="checkButton" onclick="checkKey()">Check</button>
+      <button class="checkButton" onclick="checkKey()">Check the combination</button>
 
       <p id="message"></p>
 
-      <div id="overlay">
+      <!-- <div id="overlay">
         <button onclick="startGame()">Start</button>
-      </div>
+      </div> -->
 </body>
 </html>
