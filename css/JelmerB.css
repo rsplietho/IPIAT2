@@ -4,6 +4,11 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+    .riddlebody {
+        background-image: url('../img/blaadje.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
     .button_deur{
         position: absolute;
         top: 67.5%;
@@ -45,6 +50,11 @@
         background-image: url('../img/huis_desktop.png');
         background-size: cover;
         background-repeat: no-repeat;
+    }
+    .riddlebody {
+        background-image: url('../img/blaadje.png');
+        background-size: cover;
+        background-repeat: repeat;
     }
     .button_deur{
         position: absolute;
