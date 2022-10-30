@@ -7,7 +7,8 @@
     .riddlebody {
         background-image: url('../img/blaadje.png');
         background-size: cover;
-        background-repeat: no-repeat;
+        background-repeat: repeat;
+        height: 100%;
     }
     .button_deur{
         position: absolute;
@@ -27,11 +28,11 @@
     }
     .button_raam{
         position: absolute;
-        top: 44%;
-        left: 32%;
-        padding-top: 20px;
+        top: 41%;
+        left: 29%;
+        padding-top: 5px;
         padding-bottom: 105px;
-        padding-left: 200px;
+        padding-left: 151px;
         border-radius: 0.5rem;
         cursor: pointer;
         background-image: linear-gradient(to right, black 50%, darkred 50%);
@@ -41,25 +42,48 @@
     .button_raam:hover {
         background-position: right;
     }
+    .easteregg {
+        position: absolute;
+        top: 44%;
+        left: 89%;
+        padding-top: 40px;
+        padding-bottom: 50px;
+        background : none;
+        padding-left: 50px;
+        border-radius: 0.5rem;
+        cursor: pointer;
+    }
     #riddletext {
         width: 50%;
         margin: 0 auto;
     }
     #riddletext p { 
-        font-size: 50px;
-        margin-top: 30px;
+        font-size: 20px;
+        margin-top: 10px;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
     }
     #riddletext h1 {
-        font-size: 70px;
+        font-size: 40px;
         text-align: center;
-        margin-top: 300px;
+        margin-top: 50px;
         margin-bottom: 10px;
     }
     #riddletext h2 {
-        font-size: 40px;
+        font-size: 20px;
         text-align: center;
         margin-top: 20px;
-        margin-bottom: 100px;
+        margin-bottom: 50px;
+    }
+    .pijl {
+        margin-left: 20px;
+        margin-top : 20px;
+        -webkit-user-drag: none;
+        width: 50px;
+    }
+    .apijl {
+        -webkit-user-drag: none;
     }
 }
 
@@ -140,5 +164,13 @@
         margin-top: 20px;
         margin-bottom: 100px;
     }
-    
+    .pijl {
+        margin-left: 50px;
+        margin-top : 50px;
+        -webkit-user-drag: none;
+        width: 150px;
+    }
+    .apijl {
+        -webkit-user-drag: none;
+    }
 }
