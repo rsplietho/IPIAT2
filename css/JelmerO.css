@@ -1,4 +1,15 @@
 
+#health{
+  background-color: #f44336;
+}
+
+#healthBar{
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
 .notification{
     max-width: 350px;
     padding: 15px;
