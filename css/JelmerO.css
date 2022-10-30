@@ -44,24 +44,49 @@
 
 body{
     background-image: none;
+    background-color: #515151;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
 }
 
 .titel{
     margin: 0 auto;
+    text-align: center;
     width: fit-content;
+    padding: 15px;
+    color: white;
+}
+
+#message{
+  padding: 15px;
+  margin: 0 auto;
+  display: block;
+  color: white;
+}
+
+.informationDisplay{
+  margin: 0 auto; 
+  max-width: 600px;
+  text-align: center;
+  padding: 25px;
 }
 
 /* drag 'n drop */
 .draggable-elements {
     display: grid;
     grid-template-columns: auto auto auto;
+    gap: 15px;
     margin: 2rem;
     max-width: 600px;
     margin: 0 auto;
+    background-color: #7C3C18;
+    padding: 35px 20px;
   }
 
   .draggable-elements > img{
     margin: 0 auto;
+    border-radius: 25px;
   }
 
   .draggable {
@@ -142,8 +167,26 @@ body{
     border: 1px solid black;
     border-radius: 5px;
   }
-  
+
+  .checkButton:hover, .retryButton:hover{
+    cursor: pointer;
+  }
+
+  .checkButton[disabled]:hover, .retryButton[disabled]:hover{
+    cursor: not-allowed;
+  }
+
+
+  .retryButton{
+    padding: 1.2rem 3rem;
+    background-color: rgb(191, 218, 72);
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
   @media (max-width: 600px) {
     html { font-size: 14px; }
     .draggable-elements { margin: 1.5rem; }
+
+    html, body {margin: 0; height: 100%; overflow: hidden}
   }

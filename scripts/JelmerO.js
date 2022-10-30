@@ -1,5 +1,9 @@
 const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".droppable");
+const checkButton = document.getElementById('checkButton');
+const retryButton = document.getElementById('retryButton');
+var countDragged = 0;
+// document.addEventListener('contextmenu', event => event.preventDefault());
 
 draggableElements.forEach(elem => {
   elem.addEventListener("dragstart", dragStart); // Fires as soon as the user starts dragging an item - This is where we can define the drag data
@@ -21,7 +25,6 @@ droppableElements.forEach(elem => {
 function dragStart(event) {
   event.dataTransfer.setData("text",event.target.dataset.keyAndColor); // or "text/plain" but just "text" would also be fine since we are not setting any other type/format for data value
 }
-// [event.target.id, event.target.dataset.color]
 //Events fired on the drop target
 
 function dragEnter(event) {
@@ -68,23 +71,16 @@ function drop(event) {
   if(isCorrectMatching) {
     const draggableElement = document.querySelector('[data-key-and-color="'+transferredData+'"]');
     event.target.classList.add("dropped");
-    // event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following: 
-    // event.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
     draggableElement.classList.add("dragged");
     draggableElement.setAttribute("draggable", "false");
     event.target.insertAdjacentHTML("afterbegin", `<img class="droppedImg" src="/assets/JelmerO/img/${keyType}${keyColor}.png"/>`);
+    countDragged += 1;
+    console.log(countDragged);
+    if(countDragged == 3){
+      checkButton.disabled = false;
+    }
   }  
 }
-
-
-// function startGame(){
-//     const lives = localStorage.getItem('lives')
-//     localStorage.setItem('lives', 100);
-//     const overlay = document.getElementById('overlay');
-//     overlay.style.display = "none";
-//     const message = document.getElementById('message');
-//     message.innerHTML = "Je hebt nog " + lives + " levens over!" ; 
-// }
 
 // Om te checken of de combinatie van de sleutels de juiste is.
 function checkKey() {
@@ -97,7 +93,7 @@ function checkKey() {
         draggedItems.push(elem);
       }
     });
-
+    // check of de kleur van alle sleutels zwart is
     if(
       draggedItems[0].dataset.color === "" &&
       draggedItems[1].dataset.color === "" &&
@@ -106,14 +102,24 @@ function checkKey() {
         message.innerHTML = "JE HEBT DE COMBINATIE GOED";
       }else{
         message.innerHTML = "JE HEBT DE COMBINATIE FOUT";
+        retryButton.disabled = false;
         // showLives(livesNew)
         // location.reload(); 
+
       }
+      countDragged = 0;
     console.log(draggedItems)
+    checkButton.disabled = true;
 
     // showLives(livesNew)
     // location.reload(); 
 }
+
+function retry(){
+  location.reload(); 
+}
+
+
 
 function showLives(l){
   localStorage.setItem('lives', l);
@@ -121,9 +127,22 @@ function showLives(l){
 }
 
 
-// color and key piece number must be right
+// color and key piece number must be right CHECKED
 
+// CHECKED
 // zorgen dat de juiste id, bijvoorbeeld  key1  op display none wordt gezet i.p.v. de eerste
 // waardoor nu de zwarte pieces verdwijnen als er een rode wordt gebruikt. omdat dat de eerste key1 is die voorkomt
 
+// TODO
 // zorgen dat start game niet elke keer bij een refresh wordt laten zien, zodat de levens alleen aan het begin op 100 staan.
+
+
+
+// function startGame(){
+//     const lives = localStorage.getItem('lives')
+//     localStorage.setItem('lives', 100);
+//     const overlay = document.getElementById('overlay');
+//     overlay.style.display = "none";
+//     const message = document.getElementById('message');
+//     message.innerHTML = "Je hebt nog " + lives + " levens over!" ; 
+// }
