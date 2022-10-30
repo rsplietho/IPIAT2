@@ -117,6 +117,7 @@ function checkKey() {
 
 function retry(){
   location.reload(); 
+  retryButton.disabled = true;
 }
 
 
