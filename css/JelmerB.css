@@ -178,6 +178,21 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    .jelmerpuzzelbody2 {
+        background-image: url(../img/alarm_desktopgoed1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .jelmerpuzzelbody3 {
+        background-image: url(../img/alarm_desktopgoed2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .jelmerpuzzelbody4 {
+        background-image: url(../img/alarm_desktopgoed3.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     .button_alarm1 {
         position: absolute;
         width: 110px;
