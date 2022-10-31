@@ -1,0 +1,41 @@
+#health {
+    background-color: #f44336;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+  
+#healthBar {
+    text-align: right;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.lock {
+    background-color: black;
+    opacity: 50%;
+    border-radius: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    min-height: 50%;
+    height: 20em;
+}
+
+.pin {
+    background-color: grey;
+    opacity: 90%;
+    display: grid inline;
+    width: 5em;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-radius: 5%;
+}
+
+.lockLine {
+    background-color: red;
+    width: 50%;
+    height: 0.5em;
+    position: absolute
+}
