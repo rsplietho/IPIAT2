@@ -8,6 +8,11 @@
     src: url(/font/Swansea-q3pd.ttf);
 }
 
+@font-face {
+    font-family: titletext;
+    src: url(/font/Deacon-Flock.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,3 +20,7 @@
     font-family: normaltext;
 }
 
+h1{
+    font-family: titletext;
+    font-size: 48px;
+}
