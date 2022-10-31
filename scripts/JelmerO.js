@@ -6,6 +6,20 @@ const retryButton = document.getElementById('retryButton');
 var countDragged = 0;
 // document.addEventListener('contextmenu', event => event.preventDefault());
 
+const key1Found = localStorage.getItem('key1Found')
+const key2Found = localStorage.getItem('key2Found')
+const key3Found = localStorage.getItem('key3Found')
+
+draggableElements.forEach(elem => {
+  if(key1Found != 3 && elem.dataset.color === ""){
+    elem.classList.add("dragged")
+  }else if(key2Found != 3 && elem.dataset.color === "Red"){
+    elem.classList.add("dragged")
+  }else if(key3Found != 3 && elem.dataset.color === "Blue"){
+    elem.classList.add("dragged")
+  }
+});
+
 window.onload = (event) => {
   const hp = localStorage.getItem('hpBar');
 };

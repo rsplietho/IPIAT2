@@ -14,6 +14,9 @@ function startEscapeRoom(){
             localStorage.setItem('completedPuzzles', '0');
             localStorage.setItem('time', 0)
             localStorage.setItem('gameStarted', true)
+            localStorage.setItem('key1Found', 0)
+            localStorage.setItem('key2Found', 0)
+            localStorage.setItem('key3Found', 0)
             window.location.href = "huis.html";
         }
         else{
