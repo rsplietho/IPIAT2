@@ -26,3 +26,6 @@ function Timer(window) {
     this.loadTime()
     setInterval(this.update, 1000, this.window, this.time, this.saveTime, this.loadTime)
 };
+
+
+window.onload = () => {timer = new Timer("timerWindow", 10)}

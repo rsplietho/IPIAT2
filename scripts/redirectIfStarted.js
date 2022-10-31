@@ -10,6 +10,7 @@ if(gameStarted == "true"){
 function startEscapeRoom(){
     localStorage.setItem('hpBar', '100');
     localStorage.setItem('completedPuzzles', '0');
+    localStorage.setItem('time', 0)
     localStorage.setItem('gameStarted', true)
     window.location.href = "huis.html";
 }
