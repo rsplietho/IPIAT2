@@ -9,6 +9,7 @@ if(gameStarted == "true"){
 // Hier worden alle waardes die binnen de localstorage moeten worden opgeslagen vanaf de start aangemaakt
 function startEscapeRoom(){
     localStorage.setItem('hpBar', '100');
+    localStorage.setItem('completedPuzzles', '0');
     localStorage.setItem('gameStarted', true)
     window.location.href = "huis.html";
 }

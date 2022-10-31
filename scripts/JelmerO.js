@@ -105,6 +105,8 @@ function checkKey() {
       draggedItems[2].dataset.color === ""
       ){
         message.innerHTML = "JE HEBT DE COMBINATIE GOED";
+        localStorage.setItem('completedPuzzles', + 1)
+        location.reload();
       }else{
         message.innerHTML = "JE HEBT DE COMBINATIE FOUT";
         retryButton.disabled = false;
@@ -132,6 +134,10 @@ if (localStorage.getItem('hpBar') == 0){
   window.location.href = "gameover.html";
 }
 
+// When all puzzles are completed == 0
+if (localStorage.getItem('completedPuzzles') == 1){
+  window.location.href = "eindscherm.html";
+}
 
 
 // color and key piece number must be right CHECKED
