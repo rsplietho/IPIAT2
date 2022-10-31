@@ -173,4 +173,9 @@
     .apijl {
         -webkit-user-drag: none;
     }
+    .jelmerpuzzelbody {
+        background-image: url(../img/hetalarm.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
