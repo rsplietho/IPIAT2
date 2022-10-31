@@ -1,5 +1,6 @@
 const draggableElements = document.querySelectorAll(".draggable");
 const droppableElements = document.querySelectorAll(".droppable");
+const droppableElementsContainer = document.getElementById('droppableElementsContainer');
 const checkButton = document.getElementById('checkButton');
 const retryButton = document.getElementById('retryButton');
 var countDragged = 0;
@@ -7,7 +8,6 @@ var countDragged = 0;
 
 window.onload = (event) => {
   const hp = localStorage.getItem('hpBar');
-  message.innerHTML = "Je hebt nog " + hp + " levens over!";
 };
 
 draggableElements.forEach(elem => {
@@ -92,7 +92,9 @@ function checkKey() {
   const hp = localStorage.getItem('hpBar')
   const hpNew = hp - 50;
   const draggedItems = [];
+  droppableElementsContainer.classList.add('droppable-elementsChecked');
 
+  setTimeout(function() {
     draggableElements.forEach(elem => {
       if(elem.classList.contains('dragged')) {
         draggedItems.push(elem);
@@ -100,23 +102,33 @@ function checkKey() {
     });
     // check of de kleur van alle sleutels zwart is
     if(
-      draggedItems[0].dataset.color === "" &&
+      draggedItems[0].dataset.color === "Red" &&
       draggedItems[1].dataset.color === "" &&
-      draggedItems[2].dataset.color === ""
+      draggedItems[2].dataset.color === "Blue"
       ){
-        message.innerHTML = "JE HEBT DE COMBINATIE GOED";
         localStorage.setItem('completedPuzzles', + 1)
         location.reload();
       }else{
-        message.innerHTML = "JE HEBT DE COMBINATIE FOUT";
+        makeRed();
         retryButton.disabled = false;
         showNewHP(hpNew)
-        // location.reload(); 
+        // location.reload();
 
       }
       countDragged = 0;
     console.log(draggedItems)
     checkButton.disabled = true;
+  }, 2000);
+
+
+
+}
+
+function makeRed(){
+  const droppedElements = document.getElementsByClassName('dropped')
+  Array.from(droppedElements).forEach(elem => {
+    elem.style.border = "5px solid red";
+  });
 }
 
 function retry(){
@@ -126,7 +138,6 @@ function retry(){
 
 function showNewHP(hp){
   localStorage.setItem('hpBar', hp);
-  message.innerHTML = "Je hebt nog " + hp + " levens over!";
 }
 
 // When HP == 0

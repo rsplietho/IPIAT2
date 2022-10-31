@@ -97,9 +97,30 @@ body{
   max-width: 600px;
   text-align: center;
   padding: 25px;
+  display: flex;
+}
+
+.informationDisplay > button{
+  width: 40%;
 }
 
 /* drag 'n drop */
+
+.droppable-elements{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  max-width: 600px;
+  margin: 0 auto;
+  gap: 50px;
+  width: calc(18rem + 100px);
+}
+
+.droppable-elementsChecked{
+  gap: 0px;
+  width: 18rem;
+  transition: 2s;
+}
+
 .draggable-elements {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -126,19 +147,20 @@ body{
     margin: 0rem 0.5rem;
     cursor: move;
     transition: opacity 0.2s;
+    rotate: 90deg;
   }
 
   .draggable:hover {
     opacity: 0.5;
   }
   .droppable {
-    height: 6.5rem;
-    width: 6.5rem;
+    height: 6rem;
+    width: 6rem;
     margin: 1rem auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
     font-size: 4rem;
     font-weight: bold;
@@ -151,7 +173,7 @@ body{
     margin: 0 auto;
     align-items: center;
     width: 100%;
-    rotate: 90deg;
+    rotate: 0deg;
 }
 
   .droppable span {
@@ -216,4 +238,9 @@ body{
     .draggable-elements { margin: 1.5rem; }
 
     html, body {margin: 0; height: 100%; overflow: hidden}
+
+    .droppedImg{
+      rotate: 0deg;
+  }
+  
   }

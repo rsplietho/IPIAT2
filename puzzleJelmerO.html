@@ -16,6 +16,7 @@
   <div id="healthBar">
     <div id="health"></div>
   </div>
+  <p id="timerWindow"></p>
 
 
   <article class="titel">
@@ -23,32 +24,39 @@
     <h3>Door de onderdelen naar de juiste vakjes te slepen</h3>
   </article>
 
-  <section class="droppable-elements">
+  <section class="droppable-elements" id="droppableElementsContainer">
     <div class="droppable" data-draggable-id="key1"><span>piece 1</span></div>
     <div class="droppable" data-draggable-id="key2"><span>piece 2</span></div>
     <div class="droppable" data-draggable-id="key3"><span>piece 3</span></div>
   </section>
 
   <section class="informationDisplay">
-    <p id="message"></p>
     <button disabled="disabled" id="checkButton" class="checkButton" onclick="checkKey()">Check the combination</button>
     <br><br>
     <button disabled="disabled" id="retryButton" class="retryButton" onclick="retry()">Retry</button>
   </section>
 
   <section class="draggable-elements">
-    <img src="/assets/JelmerO/img/key2.png" class="draggable" draggable="true" data-color id="key2"
-      data-key-and-color="key2." />
     <img src="/assets/JelmerO/img/key1.png" class="draggable" draggable="true" data-color id="key1"
       data-key-and-color="key1." />
-    <img src="/assets/JelmerO/img/key3.png" class="draggable" draggable="true" data-color id="key3"
-      data-key-and-color="key3." />
-    <img src="/assets/JelmerO/img/key2Red.png" class="draggable" draggable="true" data-color="Red" id="key2"
-      data-key-and-color="key2.Red" />
     <img src="/assets/JelmerO/img/key1Red.png" class="draggable" draggable="true" data-color="Red" id="key1"
       data-key-and-color="key1.Red" />
+    <img src="/assets/JelmerO/img/key1Blue.png" class="draggable" draggable="true" data-color="Blue" id="key1"
+      data-key-and-color="key1.Blue" />
+
+    <img src="/assets/JelmerO/img/key2.png" class="draggable" draggable="true" data-color id="key2"
+      data-key-and-color="key2." />
+    <img src="/assets/JelmerO/img/key2Red.png" class="draggable" draggable="true" data-color="Red" id="key2"
+      data-key-and-color="key2.Red" />
+    <img src="/assets/JelmerO/img/key2Blue.png" class="draggable" draggable="true" data-color="Blue" id="key2"
+      data-key-and-color="key2.Blue" />
+
+    <img src="/assets/JelmerO/img/key3.png" class="draggable" draggable="true" data-color id="key3"
+      data-key-and-color="key3." />
     <img src="/assets/JelmerO/img/key3Red.png" class="draggable" draggable="true" data-color="Red" id="key3"
       data-key-and-color="key3.Red" />
+    <img src="/assets/JelmerO/img/key3Blue.png" class="draggable" draggable="true" data-color="Blue" id="key3"
+      data-key-and-color="key3.Blue" />
   </section>
 
 
@@ -57,8 +65,9 @@
       </div> -->
 
 
-      <script  src="scripts/healthbar.js"></script>
-      <script src="scripts/notification.js" ></script>
+  <script type="text/javascript" src="./scripts/timer.js"></script>
+  <script src="scripts/healthbar.js"></script>
+  <script src="scripts/notification.js"></script>
 </body>
 
 </html>

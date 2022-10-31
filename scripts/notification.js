@@ -5,7 +5,7 @@ const time = localStorage.getItem('time')
         if (perm === 'granted') {
 
             // notificatie  
-            if(hp == "50")
+            if(healthpoints == "50")
             // Boss is de titel
             new Notification('Boss', {
                 // bericht binnen de notificatie
