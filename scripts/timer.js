@@ -1,29 +1,28 @@
 function Timer(window) {
-    var time = 0;
-    var allottedTime = 1
+    this.time = 0;
+    this.window = window
     this.start = function() {
         setInterval(this.update(), 1000)
     };
-    this.saveTime = function() {
-        localStorage.setItem('time', this.time);
+    this.saveTime = function(time) {
+        localStorage.setItem('time', time);
+        this.time = time
     };
     this.loadTime = function() {
-        time = localStorage.getItem('time');
+        this.time = localStorage.getItem('time');
+        return localStorage.getItem('time');
     };
-    this.update = function(window) {
+    this.resetTime = function() {
+        localStorage.setItem('time', 0);
+    };
+    this.update = function(window, time, saveTime, loadTime) {
+        time = loadTime()
         time++
-        // if (allottedTime != null) {
-        //     allottedTime--
-        //     if (allottedTime == 0) {
-        //         alert("time up!")
-        //     }
-        // }
         console.log(time)
-        // console.log(allottedTime)
-        document.getElementById("timerWindow").innerHTML = time
+        document.getElementById(window).innerHTML = time
+        saveTime(time)
         return;
     };
-    console.log(time)
-    console.log(allottedTime)
-    setInterval(this.update, 1000)
+    this.loadTime()
+    setInterval(this.update, 1000, this.window, this.time, this.saveTime, this.loadTime)
 };
