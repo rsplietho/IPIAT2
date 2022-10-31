@@ -8,9 +8,17 @@ if(gameStarted == "true"){
 
 // Hier worden alle waardes die binnen de localstorage moeten worden opgeslagen vanaf de start aangemaakt
 function startEscapeRoom(){
-    localStorage.setItem('hpBar', '100');
-    localStorage.setItem('completedPuzzles', '0');
-    localStorage.setItem('time', 0)
-    localStorage.setItem('gameStarted', true)
-    window.location.href = "huis.html";
+    Notification.requestPermission().then(perm =>{
+        if (perm === 'granted') {
+            localStorage.setItem('hpBar', '100');
+            localStorage.setItem('completedPuzzles', '0');
+            localStorage.setItem('time', 0)
+            localStorage.setItem('gameStarted', true)
+            window.location.href = "huis.html";
+        }
+        else{
+            alert("Om de ultieme ervaring te hebben tijdens de escaperoom is deze permissie nodig.")
+            window.location.href = "Startscherm.html";
+        }
+    });
 }
