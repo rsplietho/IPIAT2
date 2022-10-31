@@ -19,7 +19,14 @@ function Timer(window) {
         time = loadTime()
         time++
         console.log(time)
-        document.getElementById(window).innerHTML = time
+        if(time<60){
+            document.getElementById(window).innerHTML = time
+        }
+        if(time>60){
+            minutes = Math.trunc(time/60)
+            seconds = time-minutes*60
+            document.getElementById(window).innerHTML = minutes+":"+seconds
+        }
         saveTime(time)
         return;
     };
