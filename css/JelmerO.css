@@ -1,3 +1,19 @@
+.gameoverContainer, .startContainer, .endContainer{
+  width: 80vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gameoverContainer > h1, .startContainer > h1, .endContainer > h1{
+  text-align: center;
+  padding: 25px
+}
+
+
+.gameoverContainer > button, .startContainer > button, .endContainer > button{
+  padding: 12px 18px;
+  margin: 0 auto;
+}
 
 #health{
   background-color: #f44336;
