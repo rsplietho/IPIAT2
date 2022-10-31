@@ -5,6 +5,11 @@ const retryButton = document.getElementById('retryButton');
 var countDragged = 0;
 // document.addEventListener('contextmenu', event => event.preventDefault());
 
+window.onload = (event) => {
+  const hp = localStorage.getItem('hpBar');
+  message.innerHTML = "Je hebt nog " + hp + " levens over!";
+};
+
 draggableElements.forEach(elem => {
   elem.addEventListener("dragstart", dragStart); // Fires as soon as the user starts dragging an item - This is where we can define the drag data
   // elem.addEventListener("drag", drag); // Fires when a dragged item (element or text selection) is dragged
@@ -84,8 +89,8 @@ function drop(event) {
 
 // Om te checken of de combinatie van de sleutels de juiste is.
 function checkKey() {
-  const lives = localStorage.getItem('lives')
-  const livesNew = lives - 10;
+  const hp = localStorage.getItem('hpBar')
+  const hpNew = hp - 50;
   const draggedItems = [];
 
     draggableElements.forEach(elem => {
@@ -100,19 +105,18 @@ function checkKey() {
       draggedItems[2].dataset.color === ""
       ){
         message.innerHTML = "JE HEBT DE COMBINATIE GOED";
+        localStorage.setItem('completedPuzzles', + 1)
+        location.reload();
       }else{
         message.innerHTML = "JE HEBT DE COMBINATIE FOUT";
         retryButton.disabled = false;
-        // showLives(livesNew)
+        showNewHP(hpNew)
         // location.reload(); 
 
       }
       countDragged = 0;
     console.log(draggedItems)
     checkButton.disabled = true;
-
-    // showLives(livesNew)
-    // location.reload(); 
 }
 
 function retry(){
@@ -120,11 +124,19 @@ function retry(){
   retryButton.disabled = true;
 }
 
+function showNewHP(hp){
+  localStorage.setItem('hpBar', hp);
+  message.innerHTML = "Je hebt nog " + hp + " levens over!";
+}
 
+// When HP == 0
+if (localStorage.getItem('hpBar') == 0){
+  window.location.href = "gameover.html";
+}
 
-function showLives(l){
-  localStorage.setItem('lives', l);
-  message.innerHTML = "Je hebt nog " + l + " levens over!";
+// When all puzzles are completed == 0
+if (localStorage.getItem('completedPuzzles') == 1){
+  window.location.href = "eindscherm.html";
 }
 
 
@@ -136,14 +148,3 @@ function showLives(l){
 
 // TODO
 // zorgen dat start game niet elke keer bij een refresh wordt laten zien, zodat de levens alleen aan het begin op 100 staan.
-
-
-
-// function startGame(){
-//     const lives = localStorage.getItem('lives')
-//     localStorage.setItem('lives', 100);
-//     const overlay = document.getElementById('overlay');
-//     overlay.style.display = "none";
-//     const message = document.getElementById('message');
-//     message.innerHTML = "Je hebt nog " + lives + " levens over!" ; 
-// }
