@@ -27,7 +27,6 @@ function Timer(window) {
             seconds = time-minutes*60
             document.getElementById(window).innerHTML = minutes+":"+seconds
         }
-        
         saveTime(time)
         return;
     };
