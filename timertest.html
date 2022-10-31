@@ -9,12 +9,16 @@
 </head>
 <body>
     <div id="timerWindow"></div>
-    <button id="timerKnop">Timer Start</button>
-    <script type="text/javascript" src="./js/timer.js"></script>
+    <!-- <button id="objectKnop">Timer Object create</button> -->
+    <button id="timerKnop" onclick="timerStart()">Timer Start</button>
+    <script type="text/javascript" src="./scripts/timer.js"></script>
     <script type="text/javascript">
-        timer = new Timer("timerWindow")
-        document.getElementById("timerKnop").addEventListener("click", timer.start()); 
-        
+        // document.getElementById("timerKnop").addEventListener("click", timer.start()); 
+        let timerStart = () => {
+            timer = new Timer("timerWindow", 10)
+            console.log("start")
+            // let runningTimer = 
+        }
     </script>
 </body>
 </html>
