@@ -11,11 +11,11 @@ const key2Found = localStorage.getItem('key2Found')
 const key3Found = localStorage.getItem('key3Found')
 
 draggableElements.forEach(elem => {
-  if(key1Found != 3 && elem.dataset.color === ""){
+  if (key1Found != 3 && elem.dataset.color === "Red") {
     elem.classList.add("dragged")
-  }else if(key2Found != 3 && elem.dataset.color === "Red"){
+  } else if (key2Found != 3 && elem.dataset.color === "") {
     elem.classList.add("dragged")
-  }else if(key3Found != 3 && elem.dataset.color === "Blue"){
+  } else if (key3Found != 3 && elem.dataset.color === "Blue") {
     elem.classList.add("dragged")
   }
 });
@@ -42,24 +42,24 @@ droppableElements.forEach(elem => {
 //Events fired on the drag target
 
 function dragStart(event) {
-  event.dataTransfer.setData("text",event.target.dataset.keyAndColor); // or "text/plain" but just "text" would also be fine since we are not setting any other type/format for data value
+  event.dataTransfer.setData("text", event.target.dataset.keyAndColor); // or "text/plain" but just "text" would also be fine since we are not setting any other type/format for data value
 }
 //Events fired on the drop target
 
 function dragEnter(event) {
-  if(!event.target.classList.contains("dropped")) {
+  if (!event.target.classList.contains("dropped")) {
     event.target.classList.add("droppable-hover");
   }
 }
 
 function dragOver(event) {
-  if(!event.target.classList.contains("dropped")) {
+  if (!event.target.classList.contains("dropped")) {
     event.preventDefault(); // Prevent default to allow drop
   }
 }
 
 function dragLeave(event) {
-  if(!event.target.classList.contains("dropped")) {
+  if (!event.target.classList.contains("dropped")) {
     event.target.classList.remove("droppable-hover");
   }
 }
@@ -72,7 +72,7 @@ function drop(event) {
 
   const transferredData = event.dataTransfer.getData("text"); // Get the dragged data. This method will return any data that was set to the same type in the setData() method
   console.log(transferredData);
-  const dataArray  = transferredData.split('.');
+  const dataArray = transferredData.split('.');
 
 
   // id van de key die is gedropped
@@ -81,86 +81,93 @@ function drop(event) {
   console.log(dataArray[0] + ' and ' + dataArray[1])
   const droppableElementData = event.target.getAttribute("data-draggable-id");
   const isCorrectMatching = keyType === droppableElementData;
-  
 
-    //kleur in variabele zetten om te kunnen gebruiken
+
+  //kleur in variabele zetten om te kunnen gebruiken
   const keyColor = dataArray[1];
 
 
-  if(isCorrectMatching) {
-    const draggableElement = document.querySelector('[data-key-and-color="'+transferredData+'"]');
+  if (isCorrectMatching) {
+    const draggableElement = document.querySelector('[data-key-and-color="' + transferredData + '"]');
     event.target.classList.add("dropped");
     draggableElement.classList.add("dragged");
     draggableElement.setAttribute("draggable", "false");
     event.target.insertAdjacentHTML("afterbegin", `<img class="droppedImg" src="/assets/JelmerO/img/${keyType}${keyColor}.png"/>`);
     countDragged += 1;
     console.log(countDragged);
-    if(countDragged == 3){
+    if (countDragged == 3) {
       checkButton.disabled = false;
     }
-  }  
+  }
 }
 
 // Om te checken of de combinatie van de sleutels de juiste is.
 function checkKey() {
   const hp = localStorage.getItem('hpBar')
-  const hpNew = hp - 50;
+  const hpNew = hp - 10;
   const draggedItems = [];
   droppableElementsContainer.classList.add('droppable-elementsChecked');
 
-  setTimeout(function() {
+  setTimeout(function () {
     draggableElements.forEach(elem => {
-      if(elem.classList.contains('dragged')) {
+      if (elem.classList.contains('dragged')) {
         draggedItems.push(elem);
       }
     });
     // check of de kleur van alle sleutels zwart is
-    if(
+    if (
       draggedItems[0].dataset.color === "Red" &&
       draggedItems[1].dataset.color === "" &&
       draggedItems[2].dataset.color === "Blue"
-      ){
+    ) {
+      makeGreen()
+      setTimeout(function () {
         localStorage.setItem('completedPuzzles', + 1)
         location.reload();
-      }else{
-        makeRed();
-        retryButton.disabled = false;
-        showNewHP(hpNew)
-        // location.reload();
+      }, 10000);
+    } else {
+      makeRed();
+      retryButton.disabled = false;
+      showNewHP(hpNew)
+      // location.reload();
 
-      }
-      countDragged = 0;
+    }
+    countDragged = 0;
     console.log(draggedItems)
     checkButton.disabled = true;
   }, 2000);
-
-
-
 }
 
-function makeRed(){
+function makeRed() {
   const droppedElements = document.getElementsByClassName('dropped')
   Array.from(droppedElements).forEach(elem => {
     elem.style.border = "5px solid red";
   });
 }
 
-function retry(){
-  location.reload(); 
+function makeGreen() {
+  const droppedElements = document.getElementsByClassName('dropped')
+  Array.from(droppedElements).forEach(elem => {
+    elem.style.border = "5px solid green";
+  });
+}
+
+function retry() {
+  location.reload();
   retryButton.disabled = true;
 }
 
-function showNewHP(hp){
+function showNewHP(hp) {
   localStorage.setItem('hpBar', hp);
 }
 
 // When HP == 0
-if (localStorage.getItem('hpBar') == 0){
+if (localStorage.getItem('hpBar') == 0) {
   window.location.href = "gameover.html";
 }
 
 // When all puzzles are completed == 0
-if (localStorage.getItem('completedPuzzles') == 1){
+if (localStorage.getItem('completedPuzzles') == 1) {
   window.location.href = "eindscherm.html";
 }
 

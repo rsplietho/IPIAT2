@@ -23,9 +23,9 @@ Notification.requestPermission().then(perm => {
             // Boss is de titel
             new Notification('Alert', {
                 // bericht binnen de notificatie
-                body: "Je hebt de zwarte sleutel gevonden 1/3",
+                body: "Je hebt de RODE sleutel gevonden 1/3",
                 // afbeelding binnen de notificatie
-                icon: "assets/JelmerO/img/key.png",
+                icon: "assets/JelmerO/img/keyRed.png",
             })
         }
 
@@ -36,9 +36,9 @@ Notification.requestPermission().then(perm => {
             // Boss is de titel
             new Notification('Alert', {
                 // bericht binnen de notificatie
-                body: "Je hebt de rode sleutel gevonden 2/3",
+                body: "Je hebt de ZWARTE sleutel gevonden 2/3",
                 // afbeelding binnen de notificatie
-                icon: "assets/JelmerO/img/keyRed.png",
+                icon: "assets/JelmerO/img/key.png",
             })
         }
 
@@ -50,7 +50,7 @@ Notification.requestPermission().then(perm => {
             // Boss is de titel
             new Notification('Alert', {
                 // bericht binnen de notificatie
-                body: "Je hebt de blauwe sleutel gevonden 3/3",
+                body: "Je hebt de BLAUWE sleutel gevonden 3/3",
                 // afbeelding binnen de notificatie
                 icon: "assets/JelmerO/img/keyBlue.png",
             })
