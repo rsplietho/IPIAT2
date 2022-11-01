@@ -10,6 +10,16 @@
         background-repeat: repeat;
         height: 100%;
     }
+    .jelmerpuzzelbody {
+        background-image: url(../img/alarm_mobile.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .jelmerpuzzelbodyfout {
+        background-image: url(../img/alarm_mobilefout.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     .button_deur{
         position: absolute;
         top: 67.5%;
@@ -80,10 +90,201 @@
         margin-left: 20px;
         margin-top : 20px;
         -webkit-user-drag: none;
-        width: 50px;
+        width: 70px;
     }
     .apijl {
         -webkit-user-drag: none;
+    }
+    .button_alarm1 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 5.5%;
+        top: 28%;
+        ;
+        border-radius: 1rem;
+    }
+    .button_alarm2 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 36.5%;
+        top: 28%;
+        ;
+        border-radius: 1rem;
+    }
+    .button_alarm3 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 66.5%;
+        top: 28%;
+        ;
+        border-radius: 1rem;
+    }
+    .button_alarm4 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 5.5%;
+        top: 40%;
+        ;
+        border-radius: 1rem;
+    }
+    .button_alarm5 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 36.5%;
+        top: 40%;
+        ;
+        border-radius: 1rem;
+    }
+
+    .button_alarm6 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 66.5%;
+        top: 40%;
+        ;
+        border-radius: 1rem;
+    }
+    .button_alarm7 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 5.5%;
+        top: 53%;
+        ;
+        border-radius: 1rem;
+    }
+    .button_alarm8 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 36.5%;
+        top: 53%;
+        ;
+        border-radius: 1rem;
+    }
+    .button_alarm9 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 66.5%;
+        top: 53%;
+        ;
+        border-radius: 1rem;
+    }
+    .button_alarm10 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 36.5%;
+        top: 65%;
+        ;
+        border-radius: 1rem;
+        
+    }
+    #confirm {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        left: 65%;
+        top: 65%;
+        border-radius: 3rem;
+        display: none;
+    }
+    #rightButton1 {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        left: 36.5%;
+        top: 65%;
+        border-radius: 1rem;
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+    }
+    #rightButton1:hover {
+        cursor: pointer;
+    }
+    #rightButton2 {
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        left: 36.5%;
+        top: 40%;
+        border-radius: 1rem;
+        display: none;
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+    }
+    #rightButton2:hover {
+        cursor: pointer;
+    }
+    #rightButton3 {
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        left: 36.5%;
+        top: 28%;
+        border-radius: 1rem;
+        display: none;
+        color: transparent;
+        background-color: transparent;
+        border-color: transparent;
+    }
+    #rightButton3:hover {
+        cursor: pointer;
+    }
+    .button_alarmfout {
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        background-color: red;
+        border-radius: 3rem;
+        left: 5.5%;
+        top: 64.5%;
+    }
+    .button_alarmgoed {
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        left: 45.3%;
+        top: 66%;
+        border-radius: 1rem;
+    }
+    #code {
+        position: absolute;
+        left: 35%;
+        top: 13%;
+        font-size: 70px;
+        font-family: 'Courier New', Courier, monospace;
+
+    }
+    .blink {
+        animation: blink 1.5s infinite;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: red;
+        pointer-events: none;
+    }
+    @keyframes blink {
+        0% {
+            opacity: 0.5;
+        }
+        50% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 0.5;
+        }
     }
 }
 
@@ -99,6 +300,11 @@
         background-image: url('../img/blaadje.png');
         background-size: cover;
         background-repeat: repeat;
+    }
+    .jelmerpuzzelbody {
+        background-image: url(../img/alarm_desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .button_deur{
         position: absolute;
@@ -181,26 +387,7 @@
         font-family: 'Courier New', Courier, monospace;
 
     }
-    .jelmerpuzzelbody {
-        background-image: url(../img/alarm_desktop.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .jelmerpuzzelbody2 {
-        background-image: url(../img/alarm_desktopgoed1.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .jelmerpuzzelbody3 {
-        background-image: url(../img/alarm_desktopgoed2.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .jelmerpuzzelbody4 {
-        background-image: url(../img/alarm_desktopgoed3.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+    
     .jelmerpuzzelbodyfout {
         background-image: url(../img/alarm_desktopfout.png);
         background-repeat: no-repeat;
@@ -288,6 +475,16 @@
         border-radius: 1rem;
         
     }
+    #confirm {
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        background-color: green;
+        left: 45.3%;
+        top: 66%;
+        border-radius: 3rem;
+        display: none;
+    }
     #rightButton1 {
         position: absolute;
         width: 110px;
@@ -321,9 +518,10 @@
         position: absolute;
         width: 110px;
         height: 110px;
-        left: 39%;
-        top: 46.5%;
+        left: 39.5%;
+        top: 36.5%;
         border-radius: 1rem;
+        display: none;
         color: transparent;
         background-color: transparent;
         border-color: transparent;
@@ -335,9 +533,10 @@
         position: absolute;
         width: 110px;
         height: 110px;
-        left: 34%;
+        background-color: red;
+        border-radius: 3rem;
+        left: 33.9%;
         top: 66%;
-        border-radius: 1rem;
     }
     .button_alarmgoed {
         position: absolute;
