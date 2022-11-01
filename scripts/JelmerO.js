@@ -42,6 +42,9 @@ droppableElements.forEach(elem => {
 //Events fired on the drag target
 
 function dragStart(event) {
+  if(event.target.classList.contains("dragged")){
+    event.preventDefault();
+  }
   event.dataTransfer.setData("text", event.target.dataset.keyAndColor); // or "text/plain" but just "text" would also be fine since we are not setting any other type/format for data value
 }
 //Events fired on the drop target
@@ -124,7 +127,7 @@ function checkKey() {
       setTimeout(function () {
         localStorage.setItem('completedPuzzles', + 1)
         window.location.href = "huis.html";
-      }, 10000);
+      }, 4000);
     } else {
       makeRed();
       retryButton.disabled = false;
