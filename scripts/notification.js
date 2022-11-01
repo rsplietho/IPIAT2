@@ -6,15 +6,15 @@ const key3Found = localStorage.getItem('key3Found')
 Notification.requestPermission().then(perm => {
     if (perm === 'granted') {
 
-        // notificatie
-        // if (healthpoints == "50")
-        //     // Boss is de titel
-        //     new Notification('Boss', {
-        //         // bericht binnen de notificatie
-        //         body: "PAS OP DE POLITIE IS AL ONDERWEG",
-        //         // afbeelding binnen de notificatie
-        //         icon: "assets/JelmerO/icons8-boss-96.png",
-        //     })
+        //notificatie
+        if (healthpoints == "50")
+            // Boss is de titel
+            new Notification('Boss', {
+                // bericht binnen de notificatie
+                body: "PAS OP DE POLITIE IS AL ONDERWEG",
+                // afbeelding binnen de notificatie
+                icon: "assets/JelmerO/icons8-boss-96.png",
+            })
 
         // notificatie voor vinden van de zwarte / eerste sleutel
         if (key1Found == 1) {

@@ -23,7 +23,7 @@ function startEscapeRoom(){
         }
         else{
             alert("Om de ultieme ervaring te hebben tijdens de escaperoom is deze permissie nodig.")
-            window.location.href = "Startscherm.html";
+            window.location.href = "index.html";
         }
     });
 }
