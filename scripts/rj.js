@@ -42,7 +42,12 @@ async function lockPickPuzzle() {
 
     }
     //notification("Het is gelukt, je bent binnen!")
-    window.location.href = "./puzzleJelmerB.html"
+    localStorage.setItem('key2Found', 1)
+    localStorage.setItem('puzzle1Completed', 1)
+    window.location.href = "./hallway.html"
+    let completedPuzzles = localStorage.getItem('completedPuzzles')
+    completedPuzzles++
+    localStorage.setItem('completedPuzzles', completedPuzzles);
 }
 
 async function Click(btn) {
@@ -73,7 +78,9 @@ let isCollide = (a, b) => {
 }
 
 const passed = () => {
-    //localStorage.setItem('completedPuzzles', localStorage.getItem('completedPuzzles')++);
+    let completedPuzzles = localStorage.getItem('completedPuzzles')
+    completedPuzzles++
+    localStorage.setItem('completedPuzzles', completedPuzzles);
     document.getElementById("lock").innerHTML = "<a href='./puzzleJelmerB.html' class='goAhead'>GA NAAR BINNEN</a>"
 }
 
@@ -90,6 +97,5 @@ const checkGameOver = () => {
     }
 }
 
-window.onload = () => {
-    lockPickPuzzle()
-}
+
+window.addEventListener("load", lockPickPuzzle, false); 

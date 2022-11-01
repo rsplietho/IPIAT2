@@ -23,7 +23,7 @@ Notification.requestPermission().then(perm => {
             // Boss is de titel
             new Notification('Alert', {
                 // bericht binnen de notificatie
-                body: "Je hebt de RODE sleutel gevonden 1/3",
+                body: "Je hebt de RODE sleutel gevonden, hij zat nog in de deur 1/3",
                 // afbeelding binnen de notificatie
                 icon: "assets/JelmerO/img/keyRed.png",
             })

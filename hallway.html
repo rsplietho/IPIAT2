@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hallway</title>
     <link rel="stylesheet" href="global.css">
-    <title>Puzzle</title>
+    <link rel="stylesheet" href="css/JelmerO.css">
 </head>
 <body>
     <nav>
-        <button class="backButton" onclick="window.location.href='hallway.html'">Back</button>
+        <button class="backButton" onclick="window.location.href='huis.html'">Back</button>
         <div class="dataDisplay">
           <!-- healthBar -->
           <div id="healthBar">
-            Health:
+            Hp:
             <div class="backBar">
               <div id="health"></div>
             </div>
@@ -27,7 +28,7 @@
           </div>
           <!-- Progressbar -->
           <div id="progressBar">
-            Completed:
+            Completed
             <div class="backBar">
               <div id="progress">progress</div>
             </div>
@@ -35,26 +36,27 @@
         </div>
         <button>Hint</button>
     </nav>
-    <article class="titel">
-        <h1>Open het slot</h1>
-        <h3>Klik om de pinnen te stoppen wanneer ze op het lijntje staan</h3>
-      </article>
+    <section class="hallwayContainer">
+        <article class="hallway">
+            <span class="door" id="hwDoor3">
+                <span class="doorknob"></span>
+            </span>
+            <span class="door" id="hwDoor1">
+                <span class="doorknob"></span>
+            </span>
+            <span class="door" id="hwDoor2">
+                <span class="doorknob"></span>
+            </span>
+        </article>
+    </section>
 
-    <div class="lock" id="lock">
-        <div class="pin" id="pin0"></div>
-        <div class="pin" id="pin1"></div>
-        <div class="pin" id="pin2"></div>
-        <div class="pin" id="pin3"></div>
-        <div class="pin" id="pin4"></div>
-        <div class="pin" id="pin5"></div>
-        <div class="lockLine" id="lockLine"></div>
-    </div>
-    
+    <p class="hallwayP"><<< Je kunt horizontaal scrollen om de andere deuren te gebruiken >>></p>
+
+    <script type="text/javascript" src="./scripts/hallway.js"></script>
     <script type="text/javascript" src="./scripts/timer.js"></script>
+    <script type="text/javascript" src="./scripts/timerbar.js"></script>
     <script type="text/javascript" src="scripts/healthbar.js"></script>
-    <script type="text/javascript" src="scripts/timerbar.js"></script>
     <script type="text/javascript" src="scripts/progressbar.js"></script>
     <script type="text/javascript" src="scripts/notification.js"></script>
-    <script type="text/javascript" src="scripts/rj.js"></script>
 </body>
 </html>

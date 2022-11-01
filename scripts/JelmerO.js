@@ -20,9 +20,7 @@ draggableElements.forEach(elem => {
   }
 });
 
-window.onload = (event) => {
-  const hp = localStorage.getItem('hpBar');
-};
+window.addEventListener("load", () => {const hp = localStorage.getItem('hpBar')}, false); 
 
 draggableElements.forEach(elem => {
   elem.addEventListener("dragstart", dragStart); // Fires as soon as the user starts dragging an item - This is where we can define the drag data
@@ -125,8 +123,11 @@ function checkKey() {
     ) {
       makeGreen()
       setTimeout(function () {
-        localStorage.setItem('completedPuzzles', + 1)
-        window.location.href = "huis.html";
+        localStorage.setItem('puzzle3Completed', 1)
+        let completedPuzzles = localStorage.getItem('completedPuzzles')
+        completedPuzzles++
+        localStorage.setItem('completedPuzzles', completedPuzzles);
+        window.location.href = "eindscherm.html";
       }, 4000);
     } else {
       makeRed();
@@ -166,7 +167,7 @@ function showNewHP(hp) {
 
 // When HP == 0
 if (localStorage.getItem('hpBar') == 0) {
-  window.location.href = "gameover.html";
+  window.location.href = "eindscherm.html";
 }
 
 
