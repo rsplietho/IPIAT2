@@ -29,7 +29,6 @@ Notification.requestPermission().then(perm => {
             })
         }
 
-
         // notificatie voor vinden van de rode / tweede sleutel
         if (key2Found == 1) {
             localStorage.setItem('key2Found', 3)
@@ -41,8 +40,6 @@ Notification.requestPermission().then(perm => {
                 icon: "assets/JelmerO/img/key.png",
             })
         }
-
-
 
         // notificatie voor vinden van de blauwe / laatste sleutel
         if (key3Found == 1) {
@@ -57,9 +54,8 @@ Notification.requestPermission().then(perm => {
         }
 
 
-
-
-
-
     }
 });
+
+
+

@@ -123,7 +123,7 @@ function checkKey() {
       makeGreen()
       setTimeout(function () {
         localStorage.setItem('completedPuzzles', + 1)
-        location.reload();
+        window.location.href = "huis.html";
       }, 10000);
     } else {
       makeRed();
@@ -164,11 +164,6 @@ function showNewHP(hp) {
 // When HP == 0
 if (localStorage.getItem('hpBar') == 0) {
   window.location.href = "gameover.html";
-}
-
-// When all puzzles are completed == 0
-if (localStorage.getItem('completedPuzzles') == 1) {
-  window.location.href = "eindscherm.html";
 }
 
 

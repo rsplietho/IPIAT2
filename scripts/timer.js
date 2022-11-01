@@ -35,4 +35,4 @@ function Timer(window) {
 };
 
 
-window.onload = () => {timer = new Timer("timerWindow", 10)}
+window.onload = () => {timer = new Timer("timer", 10)}
