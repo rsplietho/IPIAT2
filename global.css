@@ -35,7 +35,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #7C3C18;
+    background-color: hsla(22, 68%, 29%, 0.9);
     width: 100%;
     padding: 0 20rem
   }
@@ -62,6 +62,10 @@ nav {
   .dataDisplay {
     width: 50%;
     max-width: 900px;
+    background-color: rgba(0, 0, 0, 0.123);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
   }
   
   #health {
@@ -77,16 +81,24 @@ nav {
   #progress {
     background-color: #1358b3;
     border-radius: 25px;
+    min-width: 50px;
+  }
+
+  .backBar{
+    width: 100%;
+    background-color: white;
+    border-radius: 25px;
   }
   
   #healthBar,
   #timerBar,
   #progressBar {
     text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     color: white;
     transition-duration: 5s;
+
   }
 
 

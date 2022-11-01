@@ -231,13 +231,25 @@ main {
 
 .retryButton {
   padding: 1.2rem 3rem;
-  background-color: rgb(191, 218, 72);
+  background-color: rgb(218, 138, 72);
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 5px;
 }
 
+@media (max-width: 1200px) {
+  .informationDisplay{
+    padding: 5px;
+  }
 
+  .retryButton, .retryButton{
+    padding: 0.5rem 1rem;
+  }
+
+  .draggable-elements {
+    padding: 0.5rem;
+  }
+}
 
 @media (max-width: 600px) {
   html {
