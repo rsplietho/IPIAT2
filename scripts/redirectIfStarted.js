@@ -10,7 +10,6 @@ if(gameStarted == "true"){
 function startEscapeRoom(){
     Notification.requestPermission().then(perm =>{
         if (perm === 'granted') {
-            localStorage.setItem('hpBar', '100');
             localStorage.setItem('time', 600)
             localStorage.setItem('gameStarted', true)
             localStorage.setItem('completedPuzzles', 0);

@@ -1,4 +1,3 @@
-const healthpoints = localStorage.getItem('hpBar')
 const time = localStorage.getItem('time')
 const key1Found = localStorage.getItem('key1Found')
 const key2Found = localStorage.getItem('key2Found')
@@ -8,14 +7,14 @@ Notification.requestPermission().then(perm => {
     if (perm === 'granted') {
 
         // notificatie
-        if (healthpoints == "50")
-            // Boss is de titel
-            new Notification('Boss', {
-                // bericht binnen de notificatie
-                body: "PAS OP DE POLITIE IS AL ONDERWEG",
-                // afbeelding binnen de notificatie
-                icon: "assets/JelmerO/icons8-boss-96.png",
-            })
+        // if (healthpoints == "50")
+        //     // Boss is de titel
+        //     new Notification('Boss', {
+        //         // bericht binnen de notificatie
+        //         body: "PAS OP DE POLITIE IS AL ONDERWEG",
+        //         // afbeelding binnen de notificatie
+        //         icon: "assets/JelmerO/icons8-boss-96.png",
+        //     })
 
         // notificatie voor vinden van de zwarte / eerste sleutel
         if (key1Found == 1) {

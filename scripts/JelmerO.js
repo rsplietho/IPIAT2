@@ -6,21 +6,19 @@ const retryButton = document.getElementById('retryButton');
 var countDragged = 0;
 // document.addEventListener('contextmenu', event => event.preventDefault());
 
-const key1Found = localStorage.getItem('key1Found')
-const key2Found = localStorage.getItem('key2Found')
-const key3Found = localStorage.getItem('key3Found')
+const key1Fnd = localStorage.getItem('key1Found')
+const key2Fnd = localStorage.getItem('key2Found')
+const key3Fnd = localStorage.getItem('key3Found')
 
 draggableElements.forEach(elem => {
-  if (key1Found != 3 && elem.dataset.color === "Red") {
+  if (key1Fnd != 3 && elem.dataset.color === "Red") {
     elem.classList.add("dragged")
-  } else if (key2Found != 3 && elem.dataset.color === "") {
+  } else if (key2Fnd != 3 && elem.dataset.color === "") {
     elem.classList.add("dragged")
-  } else if (key3Found != 3 && elem.dataset.color === "Blue") {
+  } else if (key3Fnd != 3 && elem.dataset.color === "Blue") {
     elem.classList.add("dragged")
   }
 });
-
-window.addEventListener("load", () => {const hp = localStorage.getItem('hpBar')}, false); 
 
 draggableElements.forEach(elem => {
   elem.addEventListener("dragstart", dragStart); // Fires as soon as the user starts dragging an item - This is where we can define the drag data
@@ -104,8 +102,6 @@ function drop(event) {
 
 // Om te checken of de combinatie van de sleutels de juiste is.
 function checkKey() {
-  const hp = localStorage.getItem('hpBar')
-  const hpNew = hp - 10;
   const draggedItems = [];
   droppableElementsContainer.classList.add('droppable-elementsChecked');
 
@@ -132,9 +128,6 @@ function checkKey() {
     } else {
       makeRed();
       retryButton.disabled = false;
-      showNewHP(hpNew)
-      // location.reload();
-
     }
     countDragged = 0;
     console.log(draggedItems)
@@ -161,14 +154,6 @@ function retry() {
   retryButton.disabled = true;
 }
 
-function showNewHP(hp) {
-  localStorage.setItem('hpBar', hp);
-}
-
-// When HP == 0
-if (localStorage.getItem('hpBar') == 0) {
-  window.location.href = "eindscherm.html";
-}
 
 
 // color and key piece number must be right CHECKED

@@ -45,8 +45,21 @@ nav {
     background-color: grey;
     padding: 5px;
     border-radius: 12px;
+    font-weight: bold !important;
+    transition: 0.1s;
+  }
+
+  .hint:hover , .backButton:hover {
+    cursor: pointer;
+    background-color: rgb(105, 105, 105);
+    transition: 0.3s;
+    font-weight: 400 !important;
   }
   
+  .hint:active , .backButton:active {
+    background-color: rgb(80, 80, 80);
+  }
+
   /* .backButton{
     width: 5rem;
     height: 5rem;
@@ -63,11 +76,6 @@ nav {
     border-radius: 5px;
     margin: 5px;
     padding: 10px;
-  }
-  
-  #health {
-    background-color: #f44336;
-    border-radius: 25px;
   }
   
   #timerWindow {
@@ -89,7 +97,6 @@ nav {
     border-radius: 25px;
   }
   
-  #healthBar,
   #timerBar,
   #progressBar {
     text-align: center;

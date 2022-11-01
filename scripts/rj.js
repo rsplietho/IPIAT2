@@ -85,17 +85,9 @@ const passed = () => {
 }
 
 const failed = () => {
-    localStorage.setItem('hpBar', localStorage.getItem('hpBar')-10)
-    healthbarUpdate()
     window.location.reload()
 }
 
-
-const checkGameOver = () => {
-    if (localStorage.getItem('hpBar') == 0){
-        window.location.href = "gameover.html";
-    }
-}
 
 
 window.addEventListener("load", lockPickPuzzle, false); 
