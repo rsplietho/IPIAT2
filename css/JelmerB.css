@@ -193,6 +193,11 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    .jelmerpuzzelbodyfout {
+        background-image: url(../img/alarm_desktopfout.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     .button_alarm1 {
         position: absolute;
         width: 110px;
@@ -289,6 +294,15 @@
         height: 110px;
         background-color: green;
         left: 34%;
+        top: 66%;
+        border-radius: 1rem;
+    }
+    .button_alarmgoed {
+        position: absolute;
+        width: 110px;
+        height: 110px;
+        background-color: green;
+        left: 45.3%;
         top: 66%;
         border-radius: 1rem;
     }
