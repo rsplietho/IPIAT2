@@ -39,15 +39,12 @@ nav {
     width: 100%;
     padding: 0 20rem
   }
-  
-  nav > span {
-    width: 5rem;
-    height: 5rem;
-  }
 
-  nav>button {
-    width: 5rem;
-    height: 5rem;
+  .hint, .backButton {
+    font-size: 5rem !important;
+    background-color: grey;
+    padding: 5px;
+    border-radius: 12px;
   }
   
   /* .backButton{
