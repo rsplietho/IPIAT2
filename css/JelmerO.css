@@ -261,6 +261,21 @@ main {
   background-color: rgb(75, 50, 50);
 }
 
+.doorCompleted{
+  background-color: #111;
+  pointer-events: none;
+}
+
+.doorCompleted::before{
+  content: 'U have already';
+  color: white;
+}
+
+.doorCompleted::after{
+  content: ' completed this puzzle';
+  color: white;
+}
+
 .door:hover{
   cursor: pointer;
   background-color: rgb(54, 36, 36);

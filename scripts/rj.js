@@ -43,7 +43,11 @@ async function lockPickPuzzle() {
     }
     //notification("Het is gelukt, je bent binnen!")
     localStorage.setItem('key2Found', 1)
-    window.location.href = "./puzzleJelmerB.html"
+    localStorage.setItem('puzzle1Completed', 1)
+    window.location.href = "./hallway.html"
+    let completedPuzzles = localStorage.getItem('completedPuzzles')
+    completedPuzzles++
+    localStorage.setItem('completedPuzzles', completedPuzzles);
 }
 
 async function Click(btn) {
