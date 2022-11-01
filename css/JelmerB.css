@@ -20,6 +20,11 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    #hospitalbody {
+        background-image: url(../img/ziekenhuismobile.png);
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }
     .button_deur{
         position: absolute;
         top: 67.5%;
@@ -45,12 +50,6 @@
         padding-left: 151px;
         border-radius: 0.5rem;
         cursor: pointer;
-        background-image: linear-gradient(to right, black 50%, darkred 50%);
-        background-size: 200%;
-        transition: 0.4s ease-out;
-    }
-    .button_raam:hover {
-        background-position: right;
     }
     .easteregg {
         position: absolute;
@@ -266,6 +265,23 @@
         font-family: 'Courier New', Courier, monospace;
 
     }
+    #welcome {
+        font-family: 'Courier New', Courier, monospace;
+        color: black;
+        z-index: 1;
+        font-weight: 700;
+        font-size: 15px;
+        margin: 10px 10px 50px 30px;
+    }
+    .box{
+        position: absolute;
+        top: 0%;
+        z-index: -1;
+        width: 100%;
+        height: 250px;
+        background-color: white;
+        opacity: 70%;
+        }
     .blink {
         animation: blink 1.5s infinite;
         left: 0%;
@@ -306,6 +322,11 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    #hospitalbody {
+        background-image: url(../img/ziekenhuisdesktop.png);
+        background-repeat: no-repeat;
+        background-size: cover; 
+    }
     .button_deur{
         position: absolute;
         top: 69%;
@@ -331,12 +352,6 @@
         padding-left: 310px;
         border-radius: 0.5rem;
         cursor: pointer;
-        background-image: linear-gradient(to right, black 50%, darkred 50%);
-        background-size: 200%;
-        transition: 0.3s ease-out;
-    }
-    .button_raam:hover {
-        background-position: right;
     }
     .easteregg {
         position: absolute;
@@ -546,6 +561,23 @@
         top: 66%;
         border-radius: 1rem;
     }
+    #welcome {
+        font-family: 'Courier New', Courier, monospace;
+        color: black;
+        z-index: 1;
+        font-weight: 700;
+        font-size: 30px;
+        margin: 10px 10px 50px 50px;
+    }
+    .box{
+        position: absolute;
+        top: 0%;
+        z-index: -1;
+        width: 100%;
+        height: 200px;
+        background-color: white;
+        opacity: 70%;
+        }
     .blink {
         animation: blink 1.5s infinite;
         left: 0%;

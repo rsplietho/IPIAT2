@@ -22,7 +22,7 @@ Button3.addEventListener("click", function(e) {
     document.getElementsByClassName("button_alarm5").style.display = "none"
     document.getElementsByClassName("button_alarm6").style.display = "none"
     document.getElementsByClassName("button_alarm7").style.display = "none"
-    document.getElementsByClassName("button_alarm8").style.display = "none"
+    document.getElementsByClassNamp("button_alarm8").style.display = "none"
     document.getElementsByClassName("button_alarm9").style.display = "none"
     document.getElementsByClassName("button_alarm10").style.display = "none"
 });

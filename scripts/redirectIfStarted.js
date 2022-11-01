@@ -17,7 +17,7 @@ function startEscapeRoom(){
             localStorage.setItem('key1Found', 0)
             localStorage.setItem('key2Found', 0)
             localStorage.setItem('key3Found', 0)
-            window.location.href = "huis.html";
+            window.location.href = "hospital.html";
         }
         else{
             alert("Om de ultieme ervaring te hebben tijdens de escaperoom is deze permissie nodig.")
