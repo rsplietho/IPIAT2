@@ -9,16 +9,35 @@
     <script src="scripts/huis.js"></script>
 </head>
 <body class="jelmerbody">
+  <nav>
+    <button class="backButton" onclick="window.location.href='huis.html'">Back</button>
+    <div class="dataDisplay">
       <!-- healthBar -->
-  <div id="healthBar">
-    <div id="health"></div>
-  </div>
+      <div id="healthBar">
+        Hp:
+        <div id="health"></div>
+      </div>
+      <!-- Timer -->
+      <div id="timerBar">
+        Time:
+        <p id="timer"></p>
+      </div>
+      <!-- Progressbar -->
+      <div id="progressBar">
+        Completed
+        <div id="progress">progress</div>
+      </div>
+    </div>
+    <button>Hint</button>
+</nav>
 
     <a href="puzzleRobertJan.html" class="button_deur"></a>
     <a href="puzzleJelmerO.html" class="button_raam"></a>
     <a href="riddlejelmerb.html" class="easteregg"></a>
 
-    <script  src="scripts/healthbar.js"></script>
+    <script type="text/javascript" src="./scripts/timer.js"></script>
+    <script src="scripts/healthbar.js"></script>
+    <script src="scripts/progressbar.js"></script>
     <script src="scripts/notification.js"></script>
 </body>
 </html>
