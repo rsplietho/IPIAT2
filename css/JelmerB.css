@@ -25,6 +25,12 @@
         background-repeat: no-repeat;
         background-size: cover; 
     }
+    #callbody {
+        background-image: url(../img/anonymous.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: -600px;
+    }
     .button_deur{
         position: absolute;
         top: 67.5%;
@@ -89,10 +95,30 @@
         margin-left: 20px;
         margin-top : 20px;
         -webkit-user-drag: none;
-        width: 70px;
+        position: absolute;
+        top: 74%;
+        left: 15%;
+        width: 400px;
     }
     .apijl {
         -webkit-user-drag: none;
+        width: 150px;
+    }
+    .abpijl {
+        margin-left: 20px;
+        margin-top: 20px;
+        -webkit-user-drag: none;
+        width: 80px;
+    }
+    .abcpijl {
+        margin-left: 20px;
+        margin-top : 20px;
+        -webkit-user-drag: none;
+        position: absolute;
+        top: 74%;
+        left: 8%;
+        width: 400px;
+        background-color: white;
     }
     .button_alarm1 {
         position: absolute;
@@ -327,6 +353,11 @@
         background-repeat: no-repeat;
         background-size: cover; 
     }
+    #callbody {
+        background-image: url(../img/anonymous.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
     .button_deur{
         position: absolute;
         top: 69%;
@@ -386,13 +417,32 @@
         margin-bottom: 100px;
     }
     .pijl {
-        margin-left: 50px;
-        margin-top : 50px;
+        margin-left: 20px;
+        margin-top : 20px;
         -webkit-user-drag: none;
-        width: 150px;
+        position: absolute;
+        top: 75%;
+        left: 80%;
+        width: 600px;
     }
     .apijl {
         -webkit-user-drag: none;
+        width: 150px;
+    }
+    .abpijl {
+        margin-left: 50px;
+        margin-top: 50px;
+        -webkit-user-drag: none;
+        width: 150px;
+    }
+    .abcpijl {
+        margin-left: 20px;
+        margin-top : 20px;
+        -webkit-user-drag: none;
+        position: absolute;
+        top: 75%;
+        left: 65%;
+        width: 600px;
     }
     #code {
         position: absolute;

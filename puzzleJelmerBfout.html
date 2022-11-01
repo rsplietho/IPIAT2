@@ -11,9 +11,39 @@
     <section class="blink"></section>
     <p id="timerWindow"></p>
     <script type="text/javascript" src="./scripts/timer.js"></script>
-    <a href="huis.html" class="apijl">
-        <img src="img/arrow.png" alt="foto van pijl" class="pijl">
-    </a>
+    <nav>
+        <button class="backButton" onclick="window.location.href='huis.html'">Back</button>
+        <div class="dataDisplay">
+          <!-- healthBar -->
+          <div id="healthBar">
+            Health:
+            <div class="backBar">
+              <div id="health"></div>
+            </div>
+          </div>
+          <!-- Timer -->
+          <div id="timerBar">
+            Time:
+            <div class="backBar">
+              <p id="timerWindow"></p>
+            </div>
+          </div>
+          <!-- Progressbar -->
+          <div id="progressBar">
+            Completed:
+            <div class="backBar">
+              <div id="progress">progress</div>
+            </div>
+          </div>
+        </div>
+        <button>Hint</button>
+    </nav>
+    <p id="timerWindow"></p>
+    <script type="text/javascript" src="scripts/rj.js"></script>
+    <script type="text/javascript" src="scripts/healthbar.js"></script>
+    <script type="text/javascript" src="scripts/timerbar.js"></script>
+    <script type="text/javascript" src="scripts/progressbar.js"></script>
+    <script type="text/javascript" src="scripts/notification.js"></script>
     <a href="puzzleJelmerB.html" class="button_alarmfout"></a>
 </body>
 </html>
