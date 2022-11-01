@@ -77,12 +77,13 @@ nav {
     background-color: #21af21;
     border-radius: 25px;
     transition-duration: 1s;
+    min-width: 3em;
   }
   
   #progress {
     background-color: #1358b3;
     border-radius: 25px;
-    min-width: 50px;
+    min-width: 3em;
   }
 
   .backBar{

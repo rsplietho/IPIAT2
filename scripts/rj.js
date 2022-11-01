@@ -73,7 +73,9 @@ let isCollide = (a, b) => {
 }
 
 const passed = () => {
-    localStorage.setItem('completedPuzzles', localStorage.getItem('completedPuzzles')++);
+    let completedPuzzles = localStorage.getItem('completedPuzzles')
+    completedPuzzles++
+    localStorage.setItem('completedPuzzles', completedPuzzles);
     document.getElementById("lock").innerHTML = "<a href='./puzzleJelmerB.html' class='goAhead'>GA NAAR BINNEN</a>"
 }
 
