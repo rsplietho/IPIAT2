@@ -5,15 +5,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 75%;
-    min-height: 50%;
-    height: 20em;
+    width: 40em;
+    min-height: 31em;
+    height: 35em;
 }
 
 .pin {
     background-color: grey;
     opacity: 90%;
-    display: grid inline;
+    display: inline-block;
+    min-width: 1em;
     width: 5em;
     margin-left: 2em;
     margin-right: 2em;
@@ -22,7 +23,7 @@
 
 .lockLine {
     background-color: red;
-    width: 50%;
+    width: 40em;
     height: 0.5em;
     position: absolute
 }

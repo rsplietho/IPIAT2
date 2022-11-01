@@ -1,11 +1,8 @@
-const timer = document.getElementById("progress")
+const timer = document.getElementById("timerWindow")
 
 const timerbarUpdate = () => {
-    let aantalCompleted = localStorage.getItem('time');
-    progress.innerHTML = `${aantalCompleted} / 3`;
-    deel = (100 / 3) * aantalCompleted;
-
-    progress.style.width = `${deel}%`;
+    let time = localStorage.getItem('time')
+    timer.style.width = `${time/6}%`;
 }
 
 timerbarUpdate()

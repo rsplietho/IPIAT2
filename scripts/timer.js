@@ -18,7 +18,6 @@ function Timer(timeWindow) {
     this.update = function(timeWindow, time, saveTime, loadTime) {
         time = loadTime()
         time--
-        console.log(time)
         if(time<=0){
             window.location.href = "./gameover.html";
         }
@@ -31,6 +30,7 @@ function Timer(timeWindow) {
             document.getElementById(timeWindow).innerHTML = minutes+":"+seconds
         }
         saveTime(time)
+        timerbarUpdate()
         return;
     };
     this.loadTime()
