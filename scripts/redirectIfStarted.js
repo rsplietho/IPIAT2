@@ -12,7 +12,7 @@ function startEscapeRoom(){
         if (perm === 'granted') {
             localStorage.setItem('hpBar', '100');
             localStorage.setItem('completedPuzzles', '0');
-            localStorage.setItem('time', 0)
+            localStorage.setItem('time', 600)
             localStorage.setItem('gameStarted', true)
             localStorage.setItem('key1Found', 0)
             localStorage.setItem('key2Found', 0)
