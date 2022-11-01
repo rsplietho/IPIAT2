@@ -42,6 +42,7 @@ async function lockPickPuzzle() {
 
     }
     //notification("Het is gelukt, je bent binnen!")
+    localStorage.setItem('key2Found', 1)
     window.location.href = "./puzzleJelmerB.html"
 }
 

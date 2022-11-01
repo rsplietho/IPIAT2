@@ -237,6 +237,45 @@ main {
   border-radius: 5px;
 }
 
+.hallwayContainer{
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.hallway{
+  display: flex;
+  justify-content: space-around;
+  padding:  5rem 0;
+  width: 100vw;
+}
+
+.hallwayP{
+  display: none;
+}
+
+.door{
+  height: 20vw;
+  width: 10vw;
+  min-width: 200px;
+  min-height: 400px;
+  background-color: rgb(75, 50, 50);
+}
+
+.door:hover{
+  cursor: pointer;
+  background-color: rgb(54, 36, 36);
+}
+
+.doorknob{
+  width: 25px;
+  height: 25px;
+  background-color: black;
+  float: right;
+  margin-right: 3%;
+  border-radius: 25px;
+  margin-top: 100%;
+}
+
 @media (max-width: 1200px) {
   .informationDisplay{
     padding: 5px;
@@ -249,6 +288,28 @@ main {
   .draggable-elements {
     padding: 0.5rem;
   }
+
+  .hallwayContainer{
+    overflow-x: scroll;
+  }
+
+  .hallway{
+    padding: 5vw;
+    width: 300vw;
+    overflow-x: scroll;
+  }
+  
+  .hallwayP{
+    display: block;
+    text-align: center;
+  }
+  
+  .door{
+    height: 60vh;
+    width: 80vw;
+    max-width: 300px;
+  }
+
 }
 
 @media (max-width: 600px) {
@@ -269,6 +330,17 @@ main {
 
   .droppedImg {
     rotate: 0deg;
+  }
+
+  .hallway{
+    padding: 5vw;
+    width: 300vw;
+    overflow-x: scroll;
+  }
+  
+  .door{
+    height: 60vh;
+    width: 80vw;
   }
 
 }

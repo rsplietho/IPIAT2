@@ -25,4 +25,7 @@ Button3.addEventListener("click", function(e) {
     document.getElementsByClassName("button_alarm8").style.display = "none"
     document.getElementsByClassName("button_alarm9").style.display = "none"
     document.getElementsByClassName("button_alarm10").style.display = "none"
+
+    // obtain 3rd key
+    localStorage.setItem('key3Found', 1)
 });
