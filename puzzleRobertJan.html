@@ -8,8 +8,38 @@
     <title>Puzzle</title>
 </head>
 <body>
-    <div id="healthBar"><div id="health"></div></div>
-    <p id="timerWindow"></p>
+    <nav>
+        <button class="backButton" onclick="window.location.href='huis.html'">Back</button>
+        <div class="dataDisplay">
+          <!-- healthBar -->
+          <div id="healthBar">
+            Health:
+            <div class="backBar">
+              <div id="health"></div>
+            </div>
+          </div>
+          <!-- Timer -->
+          <div id="timerBar">
+            Time:
+            <div class="backBar">
+              <p id="timerWindow"></p>
+            </div>
+          </div>
+          <!-- Progressbar -->
+          <div id="progressBar">
+            Completed:
+            <div class="backBar">
+              <div id="progress">progress</div>
+            </div>
+          </div>
+        </div>
+        <button>Hint</button>
+    </nav>
+    <article class="titel">
+        <h1>Open het slot</h1>
+        <h3>Klik om de pinnen te stoppen wanneer ze op het lijntje staan</h3>
+      </article>
+
     <div class="lock" id="lock">
         <div class="pin" id="pin0"></div>
         <div class="pin" id="pin1"></div>
@@ -20,7 +50,10 @@
         <div class="lockLine" id="lockLine"></div>
     </div>
     <script type="text/javascript" src="./scripts/timer.js"></script>
-    <script type="text/javascript" src="./scripts/rj.js"></script>
+    <script type="text/javascript" src="scripts/rj.js"></script>
     <script type="text/javascript" src="scripts/healthbar.js"></script>
+    <script type="text/javascript" src="scripts/timerbar.js"></script>
+    <script type="text/javascript" src="scripts/progressbar.js"></script>
+    <script type="text/javascript" src="scripts/notification.js"></script>
 </body>
 </html>

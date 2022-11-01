@@ -5,15 +5,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
     width: 40em;
-    min-height: 31em;
-    height: 35em;
+    min-height: 30em;
+    height: 30em;
+    padding: auto;
 }
 
 .pin {
     background-color: grey;
     opacity: 90%;
-    display: inline-block;
+    display: flex inline;
     min-width: 1em;
     width: 5em;
     margin-left: 2em;

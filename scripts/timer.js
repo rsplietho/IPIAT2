@@ -22,11 +22,21 @@ function Timer(timeWindow) {
             window.location.href = "./gameover.html";
         }
         if(time<60){
-            document.getElementById(timeWindow).innerHTML = time
+            let seconds = time
+            if(seconds<10){
+                seconds = "0"+seconds
+            }
+            document.getElementById(timeWindow).innerHTML = "00:"+seconds
         }
         if(time>=60){
             minutes = Math.trunc(time/60)
             seconds = time-minutes*60
+            if(minutes<10){
+                minutes = "0"+minutes
+            }
+            if(seconds<10){
+                seconds = "0"+seconds
+            }
             document.getElementById(timeWindow).innerHTML = minutes+":"+seconds
         }
         saveTime(time)
