@@ -48,4 +48,4 @@ function Timer(timeWindow) {
 };
 
 
-window.onload = () => {timer = new Timer("timerWindow")}
+window.addEventListener("load", () => {timer = new Timer("timerWindow")}, false); 

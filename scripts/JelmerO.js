@@ -20,9 +20,7 @@ draggableElements.forEach(elem => {
   }
 });
 
-window.onload = (event) => {
-  const hp = localStorage.getItem('hpBar');
-};
+window.addEventListener("load", () => {const hp = localStorage.getItem('hpBar')}, false); 
 
 draggableElements.forEach(elem => {
   elem.addEventListener("dragstart", dragStart); // Fires as soon as the user starts dragging an item - This is where we can define the drag data
