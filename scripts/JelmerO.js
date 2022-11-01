@@ -42,6 +42,9 @@ droppableElements.forEach(elem => {
 //Events fired on the drag target
 
 function dragStart(event) {
+  if(event.target.classList.contains("dragged")){
+    event.preventDefault();
+  }
   event.dataTransfer.setData("text", event.target.dataset.keyAndColor); // or "text/plain" but just "text" would also be fine since we are not setting any other type/format for data value
 }
 //Events fired on the drop target
@@ -123,8 +126,8 @@ function checkKey() {
       makeGreen()
       setTimeout(function () {
         localStorage.setItem('completedPuzzles', + 1)
-        location.reload();
-      }, 10000);
+        window.location.href = "huis.html";
+      }, 4000);
     } else {
       makeRed();
       retryButton.disabled = false;
@@ -164,11 +167,6 @@ function showNewHP(hp) {
 // When HP == 0
 if (localStorage.getItem('hpBar') == 0) {
   window.location.href = "gameover.html";
-}
-
-// When all puzzles are completed == 0
-if (localStorage.getItem('completedPuzzles') == 1) {
-  window.location.href = "eindscherm.html";
 }
 
 

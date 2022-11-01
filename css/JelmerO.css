@@ -1,112 +1,106 @@
-.gameoverContainer, .startContainer, .endContainer{
+.gameoverContainer,
+.startContainer,
+.endContainer {
   width: 80vw;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.gameoverContainer > h1, .startContainer > h1, .endContainer > h1{
+.gameoverContainer>h1,
+.startContainer>h1,
+.endContainer>h1 {
   text-align: center;
   padding: 25px
 }
 
 
-.gameoverContainer > button, .startContainer > button, .endContainer > button{
+.gameoverContainer>button,
+.startContainer>button,
+.endContainer>button {
   padding: 12px 18px;
   margin: 0 auto;
 }
 
-#health{
-  background-color: #f44336;
+.notification {
+  max-width: 350px;
+  padding: 15px;
+  background-color: grey;
+  margin: 10px;
+  border-radius: 15px;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-between;
 }
 
-#healthBar{
-  text-align: right;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.notification>img {
+  width: 75px;
+  height: 75px;
+  background-color: black;
+  border-radius: 15px;
+}
+
+.notification>article {
+  padding: 15px;
+}
+
+
+.notification>button,
+#overlay>button {
+  width: 75px;
+  height: 75px;
+  background-color: green;
+  border-radius: 50%;
+  border: none;
+}
+
+#overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  background-color: rgba(71, 71, 71, 0.8);
+  top: 0;
+}
+
+#overlay>button {
+  margin-top: 50vh;
+}
+
+main {
+  background-image: none;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.titel {
+  margin: 0 auto;
+  text-align: center;
+  width: fit-content;
+  padding: 15px;
   color: white;
 }
 
-.notification{
-    max-width: 350px;
-    padding: 15px;
-    background-color: grey;
-    margin: 10px;
-    border-radius: 15px;
-    margin: 10px auto;
-    display: flex;
-    justify-content: space-between;
-}
-
-.notification > img{
-    width: 75px;
-    height: 75px;
-    background-color: black;
-    border-radius: 15px;
-}
-
-.notification > article{
-    padding: 15px;
-}
-
-
-.notification > button, #overlay > button{
-    width: 75px;
-    height: 75px;
-    background-color: green;
-    border-radius: 50%;
-    border: none;
-}
-
-#overlay{
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    background-color: rgba(71, 71, 71, 0.8);
-    top: 0;
-}
-
-#overlay > button{
-    margin-top: 50vh;
-}
-
-body{
-    background-image: none;
-    background-color: #515151;
-    max-width: 1200px;
-    margin: 0 auto;
-    height: 100vh;
-}
-
-.titel{
-    margin: 0 auto;
-    text-align: center;
-    width: fit-content;
-    padding: 15px;
-    color: white;
-}
-
-#message{
+#message {
   padding: 15px;
   margin: 0 auto;
   display: block;
   color: white;
 }
 
-.informationDisplay{
-  margin: 0 auto; 
+.informationDisplay {
+  margin: 0 auto;
   max-width: 600px;
   text-align: center;
   padding: 25px;
   display: flex;
 }
 
-.informationDisplay > button{
+.informationDisplay>button {
   width: 40%;
 }
 
 /* drag 'n drop */
-
-.droppable-elements{
+.droppable-elements {
   display: grid;
   grid-template-columns: auto auto auto;
   max-width: 600px;
@@ -115,132 +109,166 @@ body{
   width: calc(18rem + 100px);
 }
 
-.droppable-elementsChecked{
+.droppable-elementsChecked {
   gap: 0px;
   width: 18rem;
   transition: 2s;
 }
 
 .draggable-elements {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 15px;
-    margin: 2rem;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #7C3C18;
-    padding: 35px 20px;
-  }
-
-  .draggable-elements > img{
-    margin: 0 auto;
-    border-radius: 25px;
-  }
-
-  .draggable {
-    height: 5rem;
-    width: 5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    margin: 0rem 0.5rem;
-    cursor: move;
-    transition: opacity 0.2s;
-    rotate: 90deg;
-  }
-
-  .draggable:hover {
-    opacity: 0.5;
-  }
-  .droppable {
-    height: 6rem;
-    width: 6rem;
-    margin: 1rem auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    text-align: center;
-    font-size: 4rem;
-    font-weight: bold;
-    background-color: #fff;
-    border: 3px dashed #111;
-    transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
-  }
-
-  .droppedImg{
-    margin: 0 auto;
-    align-items: center;
-    width: 100%;
-    rotate: 0deg;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 15px;
+  margin: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #7C3C18;
+  padding: 35px 20px;
 }
 
-  .droppable span {
-    font-size: 1.25rem;
-    pointer-events: none; /* The element is never the target of pointer events */
-  }
-  
-  /* Drag and Drop Related Styling */
-  
-  .droppable.droppable-hover {
-    /* background-color: #bee3f0; */
-    border-width: 5px;
-    transform: scale(1.1);
-  }
-  .droppable.dropped {
-    border-style: solid;
-    color: #fff;
-  }
-  .droppable.dropped span {
-    font-size: 0.75rem;
-    margin-top: 0.5rem;
-    display: none;
-  }
-  .droppable.dropped img{
-    pointer-events: none;
-  }
-  .draggable.dragged {
-    user-select: none;
-    opacity: 0.1;
-    cursor: default;
-  }
-  .draggable.dragged:hover {
-    opacity: 0.1;
+.draggable-elements>img {
+  margin: 0 auto;
+  border-radius: 25px;
+}
+
+.draggable {
+  height: 5rem;
+  width: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  margin: 0rem 0.5rem;
+  cursor: move;
+  transition: opacity 0.2s;
+  rotate: 90deg;
+}
+
+.draggable:hover {
+  opacity: 0.5;
+}
+
+.droppable {
+  height: 6rem;
+  width: 6rem;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  background-color: #fff;
+  border: 3px dashed #111;
+  transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+}
+
+.droppedImg {
+  margin: 0 auto;
+  align-items: center;
+  width: 100%;
+  rotate: 0deg;
+}
+
+.droppable span {
+  font-size: 1.25rem;
+  pointer-events: none;
+  /* The element is never the target of pointer events */
+}
+
+/* Drag and Drop Related Styling */
+
+.droppable.droppable-hover {
+  /* background-color: #bee3f0; */
+  border-width: 5px;
+  transform: scale(1.1);
+}
+
+.droppable.dropped {
+  border-style: solid;
+  color: #fff;
+}
+
+.droppable.dropped span {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  display: none;
+}
+
+.droppable.dropped img {
+  pointer-events: none;
+}
+
+.draggable.dragged {
+  user-select: none;
+  opacity: 0.1;
+  cursor: default;
+}
+
+.draggable.dragged:hover {
+  opacity: 0.1;
+}
+
+.checkButton {
+  padding: 1.2rem 3rem;
+  background-color: green;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.checkButton:hover,
+.retryButton:hover {
+  cursor: pointer;
+}
+
+.checkButton[disabled]:hover,
+.retryButton[disabled]:hover {
+  cursor: not-allowed;
+}
+
+
+.retryButton {
+  padding: 1.2rem 3rem;
+  background-color: rgb(218, 138, 72);
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+  .informationDisplay{
+    padding: 5px;
   }
 
-  .checkButton{
-    padding: 1.2rem 3rem;
-    background-color: green;
-    margin: 0 auto;
-    border: 1px solid black;
-    border-radius: 5px;
+  .retryButton, .retryButton{
+    padding: 0.5rem 1rem;
   }
 
-  .checkButton:hover, .retryButton:hover{
-    cursor: pointer;
+  .draggable-elements {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
   }
 
-  .checkButton[disabled]:hover, .retryButton[disabled]:hover{
-    cursor: not-allowed;
+  .draggable-elements {
+    margin: 1.5rem;
   }
 
-
-  .retryButton{
-    padding: 1.2rem 3rem;
-    background-color: rgb(191, 218, 72);
-    margin: 0 auto;
-    border: 1px solid black;
-    border-radius: 5px;
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden
   }
-  @media (max-width: 600px) {
-    html { font-size: 14px; }
-    .draggable-elements { margin: 1.5rem; }
 
-    html, body {margin: 0; height: 100%; overflow: hidden}
+  .droppedImg {
+    rotate: 0deg;
+  }
 
-    .droppedImg{
-      rotate: 0deg;
-  }
-  
-  }
+}

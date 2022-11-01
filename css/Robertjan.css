@@ -1,17 +1,3 @@
-#health {
-    background-color: #f44336;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    transition-duration: 1s;
-}
-  
-#healthBar {
-    text-align: right;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    color: white;
-}
-
 .lock {
     background-color: black;
     opacity: 50%;

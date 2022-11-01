@@ -12,13 +12,36 @@
 </head>
 
 <body>
-  <!-- healthBar -->
-  <div id="healthBar">
-    <div id="health"></div>
-  </div>
-  <p id="timerWindow"></p>
+  <nav>
+    <button class="backButton" onclick="window.location.href='huis.html'">Back</button>
+    <div class="dataDisplay">
+      <!-- healthBar -->
+      <div id="healthBar">
+        Hp:
+        <div class="backBar">
+          <div id="health"></div>
+        </div>
+      </div>
+      <!-- Timer -->
+      <div id="timerBar">
+        Time:
+        <div class="backBar">
+          <p id="timer"></p>
+        </div>
+      </div>
+      <!-- Progressbar -->
+      <div id="progressBar">
+        Completed
+        <div class="backBar">
+          <div id="progress">progress</div>
+        </div>
+      </div>
+    </div>
+    <button>Hint</button>
+</nav>
 
 
+<main>
   <article class="titel">
     <h1>Vorm de sleutel</h1>
     <h3>Door de onderdelen naar de juiste vakjes te slepen</h3>
@@ -58,6 +81,8 @@
     <img src="/assets/JelmerO/img/key3Blue.png" class="draggable" draggable="true" data-color="Blue" id="key3"
       data-key-and-color="key3.Blue" />
   </section>
+</main>
+
 
 
   <!-- <div id="overlay">
@@ -67,6 +92,7 @@
 
   <script type="text/javascript" src="./scripts/timer.js"></script>
   <script src="scripts/healthbar.js"></script>
+  <script src="scripts/progressbar.js"></script>
   <script src="scripts/notification.js"></script>
 </body>
 
