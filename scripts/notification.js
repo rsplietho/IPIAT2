@@ -5,7 +5,6 @@ const key3Found = localStorage.getItem('key3Found')
 
 Notification.requestPermission().then(perm => {
     if (perm === 'granted') {
-
         //notificatie
         if (time == 200)
             // Boss is de titel

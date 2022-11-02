@@ -54,17 +54,6 @@ async function Click(btn) {
     return new Promise(resolve =>  btn.onclick = () => resolve());
 }
 
-async function collisonChecker(a, b) {
-    let clicked = false
-    //while (!clicked) {
-        await addEventListener('click', (event) => {
-            console.log("Click")
-        });
-
-    //}
-
-}
-
 let isCollide = (a, b) => {
     var aRect = a.getBoundingClientRect();
     var bRect = b.getBoundingClientRect();
