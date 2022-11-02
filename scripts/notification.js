@@ -95,6 +95,18 @@ function jelmerOHint() {
     });
 }
 
+
+function rjHint() {
+    Notification.requestPermission().then(perm => {
+        if (perm === 'granted') {
+            new Notification('HINT', {
+                // bericht binnen de notificatie
+                body: "Klik op het goede moment om de deur te openen!",
+            })
+        }
+    });
+}
+
 function hallwayHint() {
     Notification.requestPermission().then(perm => {
         if (perm === 'granted') {
