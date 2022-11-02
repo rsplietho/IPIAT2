@@ -23,7 +23,7 @@
     #hospitalbody {
         background-image: url(../img/ziekenhuismobile.png);
         background-repeat: no-repeat;
-        background-size: cover; 
+        background-size: cover;
     }
     #callbody {
         background-image: url(../img/anonymous.jpg);
@@ -423,8 +423,8 @@
         margin-top : 20px;
         -webkit-user-drag: none;
         position: absolute;
-        top: 75%;
-        left: 80%;
+        top: 15%;
+        left: 65%;
         width: 600px;
     }
     
@@ -444,8 +444,8 @@
         margin-top : 20px;
         -webkit-user-drag: none;
         position: absolute;
-        top: 75%;
-        left: 80%;
+        top: 20%;
+        left: 58%;
         width: 600px;
         visibility: hidden;
     }
